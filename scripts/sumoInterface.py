@@ -7,6 +7,9 @@
 # Created:     19/06/2012
 # Copyright:   (c) teabqe 2012
 # Licence:     <your licence>
+#
+# TO DO: encapsular el acceso a SUMO en un objeto
+#
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
@@ -58,21 +61,21 @@ def getNetconvertLogPath():
 
 def runSumoSimulation(sumocfgPath):
     commandSumo = [getSumoPath(), "-c",sumocfgPath]
-    log = open(getSumoLogPath, "w+")
+    log = open(getSumoLogPath(), "w+")
     log.flush()
     retCode = subprocess.call(commandSumo, stdout=log, stderr=log)
     log.close
 
 def runDuarouter(duaroutercfgPath):
     commandDuarouter = [getDuarouterPath(), "-c",duaroutercfgPath]
-    log = open(getDuarouterLogPath, "w+")
+    log = open(getDuarouterLogPath(), "w+")
     log.flush()
     retCode = subprocess.call(commandDuarouter, stdout=log, stderr=log)
     log.close
 
 def runNetconvert(netconvertcfgPath):
     commandNetconvert = [getNetconvertPath(), "-c",netconvertcfgPath]
-    log = open(getNetconvertLogPath, "w+")
+    log = open(getNetconvertLogPath(), "w+")
     log.flush()
     retCode = subprocess.call(commandNetconvert, stdout=log, stderr=log)
     log.close
