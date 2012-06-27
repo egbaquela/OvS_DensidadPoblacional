@@ -12,6 +12,7 @@
 
 import sumoInterface
 import flowGenerator
+import outputAnalysis
 
 def main():
     origen = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml"
@@ -20,24 +21,28 @@ def main():
     sumocfgPath = "D:\Compartido\Proyectos\SUMO\OvS_DensidadPoblacional\models\\SNResumido.sumo.cfg"
     duaroutercfgPath = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido.ruoc.cfg"
 
-    setSumoPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\sumo.exe")
-    setSumoLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log")
-    setDuarouterPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe")
-    setDuarouterPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
+    sumoInterface.setSumoPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\sumo-gui.exe")
+    sumoInterface.setSumoLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log")
+    sumoInterface.setDuarouterPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe")
+    sumoInterface.setDuarouterPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
 
 
-    generateFlowsInXML(origen, destino, routeFilePath)
-    runDuarouter(duaroutercfgPath)
+    flowGenerator.generateFlowsInXML(origen, destino, routeFilePath)
+    sumoInterface.runDuarouter(duaroutercfgPath)
 
+    i=0
     optimalSolution = FALSE
     while not(optimalSolution):
-        runSumoSimulation(sumocfgPath)
-        if evaluateSolution():
+        sumoInterface.runSumoSimulation(sumocfgPath)
+        if outputAnalysis.evaluateSolution():
             optimalSolution = TRUE
         else:
-            generateNewSolutions()
+            i=i+1
+            if (i==5):
+                break
+            #generateNewSolutions()
 
-    print("SoluciÃƒÆ’Ã‚Â³n Encontrada")
+    print("SoluciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n Encontrada")
     pass
 
 if __name__ == '__main__':
