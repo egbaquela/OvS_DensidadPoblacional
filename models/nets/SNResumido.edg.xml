@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/edges_file.xsd">
+    <edge id="haciaRamallo-01" from="crc_rotonda188" to="crc_cruce-01" type="a"/>
+    <edge id="haciaRamallo-02" from="crc_cruce-01" to="crc_cruce-02" type="a"/>	
+    <edge id="haciaRamallo-03" from="crc_cruce-02" to="crc_cruce-03" type="a"/>		
+    <edge id="haciaRamallo-04" from="crc_cruce-03" to="crc_rotondaSid01" type="a"/>		
+    <edge id="haciaRamallo-05" from="crc_rotondaSid01" to="crc_rotondaSid02" type="a"/>	
+	
+    <edge id="desdeRamallo-01" from="crc_cruce-01" to="crc_rotonda188" type="a"/>
+    <edge id="desdeRamallo-02" from="crc_cruce-02" to="crc_cruce-01" type="a"/>	
+    <edge id="desdeRamallo-03" from="crc_cruce-03" to="crc_cruce-02" type="a"/>		
+    <edge id="desdeRamallo-04" from="crc_rotondaSid01" to="crc_cruce-03" type="a"/>		
+    <edge id="desdeRamallo-05" from="crc_rotondaSid02" to="crc_rotondaSid01" type="a"/>		
+	
+	
+	
+	
+    <edge id="haciaVilla-01" from="crc_rotonda188" to="crc_cruce+01" type="a"/>		
+    <edge id="haciaVilla-02" from="crc_cruce+01" to="crc_cruce+02" type="a"/>		
+    <edge id="haciaVilla-03" from="crc_cruce+02" to="crc_crucenacion" type="a"/>
+    <edge id="haciaVilla-04" from="crc_crucenacion" to="crc_crucepostnacion01" type="a"/>
+    <edge id="haciaVilla-05" from="crc_crucepostnacion01" to="crc_crucepostnacion02" type="a"/>
+    <edge id="haciaVilla-06" from="crc_crucepostnacion02" to="crc_crucedesvioillia" type="a"/>
+    <edge id="haciaVilla-07" from="crc_crucedesvioillia" to="crc_cruceillia01" type="a"/>
+
+    <edge id="desdeVilla-01" from="crc_cruce+01" to="crc_rotonda188" type="a"/>		
+    <edge id="desdeVilla-02" from="crc_cruce+02" to="crc_cruce+01" type="a"/>		
+    <edge id="desdeVilla-03" from="crc_crucenacion" to="crc_cruce+02" type="a"/>
+    <edge id="desdeVilla-04" from="crc_crucepostnacion01" to="crc_crucenacion" type="a"/>
+    <edge id="desdeVilla-05" from="crc_crucepostnacion02" to="crc_crucepostnacion01" type="a"/>
+    <edge id="desdeVilla-06" from="crc_crucedesvioillia" to="crc_crucepostnacion02" type="a"/>
+    <edge id="desdeVilla-07" from="crc_cruceillia01" to="crc_crucedesvioillia" type="a"/>
+
+	
+	
+    <edge id="hacia188-01" from="crc_rotonda188" to="crc_188+01" type="a"/>
+    <edge id="hacia188-02" from="crc_188+01" to="crc_188+02" type="a"/>
+    <edge id="hacia188-03" from="crc_188+02" to="crc_188+03" type="a"/>
+    <edge id="hacia188-04" from="crc_188+03" to="crc_188+04" type="a"/>
+    <edge id="hacia188-05" from="crc_188+04" to="crc_188+05" type="a"/>	
+	
+    <edge id="desde188-01" from="crc_188+01" to="crc_rotonda188" type="a"/>
+    <edge id="desde188-02" from="crc_188+02" to="crc_188+01" type="a"/>
+    <edge id="desde188-03" from="crc_188+03" to="crc_188+02" type="a"/>
+    <edge id="desde188-04" from="crc_188+04" to="crc_188+03" type="a"/>
+    <edge id="desde188-05" from="crc_188+05" to="crc_188+04" type="a"/>	
+
+	
+    <edge id="haciaruta9-01" from="crc_crucenacion" to="crc_nacion+01" type="a"/>
+    <edge id="haciaruta9-02" from="crc_nacion+01" to="crc_nacion+02" type="a"/>
+    <edge id="haciaruta9-03" from="crc_nacion+02" to="crc_nacion+03" type="a"/>
+    <edge id="haciaruta9-04" from="crc_nacion+03" to="crc_nacion+04" type="a"/>
+    <edge id="haciaruta9-05" from="crc_nacion+04" to="crc_nacion+05" type="a"/>	
+	
+    <edge id="desderuta9-01" from="crc_nacion+01" to="crc_crucenacion" type="a"/>
+    <edge id="desderuta9-02" from="crc_nacion+02" to="crc_nacion+01" type="a"/>
+    <edge id="desderuta9-03" from="crc_nacion+03" to="crc_nacion+02" type="a"/>
+    <edge id="desderuta9-04" from="crc_nacion+04" to="crc_nacion+03" type="a"/>
+    <edge id="desderuta9-05" from="crc_nacion+05" to="crc_nacion+04" type="a"/>		
+	
+	
+	
+    <edge id="salidacruce-01-01" from="crc_cruce-01" to="nod_cruce-01-01" type="a"/>	
+    <edge id="fsalidacruce-01-01" from="nod_cruce-01-01" to="fnod_cruce-01-01" type="a"/>    
+	<edge id="entradacruce-01-01" from="nod_cruce-01-01" to="crc_cruce-01" type="a"/>	
+	<edge id="fentradacruce-01-01" from="fnod_cruce-01-01" to="nod_cruce-01-01" type="a"/>		
+    <edge id="salidacruce-01-02" from="crc_cruce-01" to="nod_cruce-01-02" type="a"/>
+    <edge id="fsalidacruce-01-02" from="nod_cruce-01-02" to="fnod_cruce-01-02" type="a"/>	
+    <edge id="entradacruce-01-02" from="nod_cruce-01-02" to="crc_cruce-01" type="a"/>
+    <edge id="fentradacruce-01-02" from="fnod_cruce-01-02" to="nod_cruce-01-02" type="a"/>	
+    <edge id="salidacruce-02-01" from="crc_cruce-02" to="nod_cruce-02-01" type="a"/>	
+    <edge id="fsalidacruce-02-01" from="nod_cruce-02-01" to="fnod_cruce-02-01" type="a"/>	
+    <edge id="entradacruce-02-01" from="nod_cruce-02-01" to="crc_cruce-02" type="a"/>	
+    <edge id="fentradacruce-02-01" from="fnod_cruce-02-01" to="nod_cruce-02-01" type="a"/>		
+    <edge id="salidacruce-02-02" from="crc_cruce-02" to="nod_cruce-02-02" type="a"/>	
+    <edge id="fsalidacruce-02-02" from="nod_cruce-02-02" to="fnod_cruce-02-02" type="a"/>		
+    <edge id="entradacruce-02-02" from="nod_cruce-02-02" to="crc_cruce-02" type="a"/>	
+    <edge id="fentradacruce-02-02" from="fnod_cruce-02-02" to="nod_cruce-02-02" type="a"/>		
+    <edge id="salidacruce-03-01" from="crc_cruce-03" to="nod_cruce-03-01" type="a"/>	
+    <edge id="fsalidacruce-03-01" from="nod_cruce-03-01" to="fnod_cruce-03-01" type="a"/>		
+    <edge id="entradacruce-03-01" from="nod_cruce-03-01" to="crc_cruce-03" type="a"/>
+    <edge id="fentradacruce-03-01" from="fnod_cruce-03-01" to="nod_cruce-03-01" type="a"/>	
+    <edge id="salidaSid01-02" from="crc_rotondaSid01" to="nod_rotondaSid01-02" type="a"/>	
+    <edge id="fsalidaSid01-02" from="nod_rotondaSid01-02" to="fnod_rotondaSid01-02" type="a"/>		
+    <edge id="entradaSid01-02" from="nod_rotondaSid01-02" to="crc_rotondaSid01" type="a"/>	
+    <edge id="fentradaSid01-02" from="fnod_rotondaSid01-02" to="nod_rotondaSid01-02" type="a"/>		
+    <edge id="salidaSid02-01" from="crc_rotondaSid02" to="nod_rotondaSid02-01" type="a"/>
+    <edge id="fsalidaSid02-01" from="nod_rotondaSid02-01" to="fnod_rotondaSid02-01" type="a"/>	
+    <edge id="entradaSid02-01" from="nod_rotondaSid02-01" to="crc_rotondaSid02" type="a"/>	
+    <edge id="fentradaSid02-01" from="fnod_rotondaSid02-01" to="nod_rotondaSid02-01" type="a"/>		
+    <edge id="salidaSid02-02" from="crc_rotondaSid02" to="nod_rotondaSid02-02" type="a"/>	
+    <edge id="fsalidaSid02-02" from="nod_rotondaSid02-02" to="fnod_rotondaSid02-02" type="a"/>		
+    <edge id="entradaSid02-02" from="nod_rotondaSid02-02" to="crc_rotondaSid02" type="a"/>	
+    <edge id="fentradaSid02-02" from="fnod_rotondaSid02-02" to="nod_rotondaSid02-02" type="a"/>		
+    <edge id="salidaSid02-03" from="crc_rotondaSid02" to="nod_rotondaSid02-03" type="a"/>	
+    <edge id="fsalidaSid02-03" from="nod_rotondaSid02-03" to="fnod_rotondaSid02-03" type="a"/>		
+    <edge id="entradaSid02-03" from="nod_rotondaSid02-03" to="crc_rotondaSid02" type="a"/>	
+    <edge id="fentradaSid02-03" from="fnod_rotondaSid02-03" to="nod_rotondaSid02-03" type="a"/>		
+
+    <edge id="salidacruce+01-01" from="crc_cruce+01" to="nod_cruce+01-01" type="a"/>
+    <edge id="fsalidacruce+01-01" from="nod_cruce+01-01" to="fnod_cruce+01-01" type="a"/>	
+    <edge id="entradacruce+01-01" from="nod_cruce+01-01" to="crc_cruce+01" type="a"/>
+    <edge id="fentradacruce+01-01" from="fnod_cruce+01-01" to="nod_cruce+01-01" type="a"/>	
+    <edge id="salidacruce+01-02" from="crc_cruce+01" to="nod_cruce+01-02" type="a"/>
+    <edge id="fsalidacruce+01-02" from="nod_cruce+01-02" to="fnod_cruce+01-02" type="a"/>	
+    <edge id="entradacruce+01-02" from="nod_cruce+01-02" to="crc_cruce+01" type="a"/>
+    <edge id="fentradacruce+01-02" from="fnod_cruce+01-02" to="nod_cruce+01-02" type="a"/>	
+    <edge id="salidacruce+02-01" from="crc_cruce+02" to="nod_cruce+02-01" type="a"/>	
+    <edge id="fsalidacruce+02-01" from="nod_cruce+02-01" to="fnod_cruce+02-01" type="a"/>		
+    <edge id="entradacruce+02-01" from="nod_cruce+02-01" to="crc_cruce+02" type="a"/>
+    <edge id="fentradacruce+02-01" from="fnod_cruce+02-01" to="nod_cruce+02-01" type="a"/>	
+    <edge id="salidacruce+02-02" from="crc_cruce+02" to="nod_cruce+02-02" type="a"/>
+    <edge id="fsalidacruce+02-02" from="nod_cruce+02-02" to="fnod_cruce+02-02" type="a"/>	
+    <edge id="entradacruce+02-02" from="nod_cruce+02-02" to="crc_cruce+02" type="a"/>
+    <edge id="fentradacruce+02-02" from="fnod_cruce+02-02" to="nod_cruce+02-02" type="a"/>	
+    <edge id="salidacrucenacion-02" from="crc_crucenacion" to="nod_crucenacion-02" type="a"/>	
+    <edge id="fsalidacrucenacion-02" from="nod_crucenacion-02" to="fnod_crucenacion-02" type="a"/>		
+    <edge id="entradacrucenacion-02" from="nod_crucenacion-02" to="crc_crucenacion" type="a"/>	
+    <edge id="fentradacrucenacion-02" from="fnod_crucenacion-02" to="nod_crucenacion-02" type="a"/>		
+    <edge id="salidacrucepostnacion01-01" from="crc_crucepostnacion01" to="nod_crucepostnacion01-01" type="a"/>	
+    <edge id="fsalidacrucepostnacion01-01" from="nod_crucepostnacion01-01" to="fnod_crucepostnacion01-01" type="a"/>		
+    <edge id="entradacrucepostnacion01-01" from="nod_crucepostnacion01-01" to="crc_crucepostnacion01" type="a"/>
+    <edge id="fentradacrucepostnacion01-01" from="fnod_crucepostnacion01-01" to="nod_crucepostnacion01-01" type="a"/>	
+    <edge id="salidacrucepostnacion01-02" from="crc_crucepostnacion01" to="nod_crucepostnacion01-02" type="a"/>	
+    <edge id="fsalidacrucepostnacion01-02" from="nod_crucepostnacion01-02" to="fnod_crucepostnacion01-02" type="a"/>		
+    <edge id="entradacrucepostnacion01-02" from="nod_crucepostnacion01-02" to="crc_crucepostnacion01" type="a"/>
+    <edge id="fentradacrucepostnacion01-02" from="fnod_crucepostnacion01-02" to="nod_crucepostnacion01-02" type="a"/>	
+    <edge id="salidacrucepostnacion02-01" from="crc_crucepostnacion02" to="nod_crucepostnacion02-01" type="a"/>	
+    <edge id="fsalidacrucepostnacion02-01" from="nod_crucepostnacion02-01" to="fnod_crucepostnacion02-01" type="a"/>		
+    <edge id="entradacrucepostnacion02-01" from="nod_crucepostnacion02-01" to="crc_crucepostnacion02" type="a"/>
+    <edge id="fentradacrucepostnacion02-01" from="fnod_crucepostnacion02-01" to="nod_crucepostnacion02-01" type="a"/>	
+    <edge id="salidacrucepostnacion02-02" from="crc_crucepostnacion02" to="nod_crucepostnacion02-02" type="a"/>	
+    <edge id="fsalidacrucepostnacion02-02" from="nod_crucepostnacion02-02" to="fnod_crucepostnacion02-02" type="a"/>		
+    <edge id="entradacrucepostnacion02-02" from="nod_crucepostnacion02-02" to="crc_crucepostnacion02" type="a"/>
+    <edge id="fentradacrucepostnacion02-02" from="fnod_crucepostnacion02-02" to="nod_crucepostnacion02-02" type="a"/>	
+
+    <edge id="salidacruceillia01-01" from="crc_cruceillia01" to="nod_cruceillia01-01" type="a"/>
+    <edge id="fsalidacruceillia01-01" from="nod_cruceillia01-01" to="fnod_cruceillia01-01" type="a"/>	
+    <edge id="entradacruceillia01-01" from="nod_cruceillia01-01" to="crc_cruceillia01" type="a"/>
+    <edge id="fentradacruceillia01-01" from="fnod_cruceillia01-01" to="nod_cruceillia01-01" type="a"/>	
+    <edge id="salidacruceillia01-02" from="crc_cruceillia01" to="nod_cruceillia01-02" type="a"/>	
+    <edge id="fsalidacruceillia01-02" from="nod_cruceillia01-02" to="fnod_cruceillia01-02" type="a"/>	
+    <edge id="entradacruceillia01-02" from="nod_cruceillia01-02" to="crc_cruceillia01" type="a"/>	
+    <edge id="fentradacruceillia01-02" from="fnod_cruceillia01-02" to="nod_cruceillia01-02" type="a"/>	
+    <edge id="salidacruceillia01-04" from="crc_cruceillia01" to="nod_cruceillia01-04" type="a"/>	
+    <edge id="fsalidacruceillia01-04" from="nod_cruceillia01-04" to="fnod_cruceillia01-04" type="a"/>		
+    <edge id="entradacruceillia01-04" from="nod_cruceillia01-04" to="crc_cruceillia01" type="a"/>	
+    <edge id="fentradacruceillia01-04" from="fnod_cruceillia01-04" to="nod_cruceillia01-04" type="a"/>		
+
+    <edge id="salidacruce188+01-03" from="crc_188+01" to="nod_188+01-03" type="a"/>	
+    <edge id="fsalidacruce188+01-03" from="nod_188+01-03" to="fnod_188+01-03" type="a"/>		
+    <edge id="entradacruce188+01-03" from="nod_188+01-03" to="crc_188+01" type="a"/>	
+    <edge id="fentradacruce188+01-03" from="fnod_188+01-03" to="nod_188+01-03" type="a"/>	
+    <edge id="salidacruce188+01-04" from="crc_188+01" to="nod_188+01-04" type="a"/>		
+    <edge id="fsalidacruce188+01-04" from="nod_188+01-04" to="fnod_188+01-04" type="a"/>			
+    <edge id="entradacruce188+01-04" from="nod_188+01-04" to="crc_188+01" type="a"/>
+    <edge id="fentradacruce188+01-04" from="fnod_188+01-04" to="nod_188+01-04" type="a"/>	
+    <edge id="salidacruce188+02-03" from="crc_188+02" to="nod_188+02-03" type="a"/>		
+    <edge id="fsalidacruce188+02-03" from="nod_188+02-03" to="fnod_188+02-03" type="a"/>		
+    <edge id="entradacruce188+02-03" from="nod_188+02-03" to="crc_188+02" type="a"/>	
+    <edge id="fentradacruce188+02-03" from="fnod_188+02-03" to="nod_188+02-03" type="a"/>	
+    <edge id="salidacruce188+02-04" from="crc_188+02" to="nod_188+02-04" type="a"/>		
+    <edge id="fsalidacruce188+02-04" from="nod_188+02-04" to="fnod_188+02-04" type="a"/>			
+    <edge id="entradacruce188+02-04" from="nod_188+02-04" to="crc_188+02" type="a"/>	
+    <edge id="fentradacruce188+02-04" from="fnod_188+02-04" to="nod_188+02-04" type="a"/>	
+    <edge id="salidacruce188+03-03" from="crc_188+03" to="nod_188+03-03" type="a"/>	
+    <edge id="fsalidacruce188+03-03" from="nod_188+03-03" to="fnod_188+03-03" type="a"/>		
+    <edge id="entradacruce188+03-03" from="nod_188+03-03" to="crc_188+03" type="a"/>	
+    <edge id="fentradacruce188+03-03" from="fnod_188+03-03" to="nod_188+03-03" type="a"/>	
+    <edge id="salidacruce188+03-04" from="crc_188+03" to="nod_188+03-04" type="a"/>		
+    <edge id="fsalidacruce188+03-04" from="nod_188+03-04" to="fnod_188+03-04" type="a"/>			
+    <edge id="entradacruce188+03-04" from="nod_188+03-04" to="crc_188+03" type="a"/>	
+    <edge id="fentradacruce188+03-04" from="fnod_188+03-04" to="nod_188+03-04" type="a"/>		
+    <edge id="salidacruce188+04-03" from="crc_188+04" to="nod_188+04-03" type="a"/>		
+    <edge id="fsalidacruce188+04-03" from="nod_188+04-03" to="fnod_188+04-03" type="a"/>		
+    <edge id="entradacruce188+04-03" from="nod_188+04-03" to="crc_188+04" type="a"/>	
+    <edge id="fentradacruce188+04-03" from="fnod_188+04-03" to="nod_188+04-03" type="a"/>		
+    <edge id="salidacruce188+04-04" from="crc_188+04" to="nod_188+04-04" type="a"/>		
+    <edge id="fsalidacruce188+04-04" from="nod_188+04-04" to="fnod_188+04-04" type="a"/>		
+    <edge id="entradacruce188+04-04" from="nod_188+04-04" to="crc_188+04" type="a"/>	
+    <edge id="fentradacruce188+04-04" from="fnod_188+04-04" to="nod_188+04-04" type="a"/>		
+ 	<edge id="salidacruce188+05-01" from="crc_188+05" to="nod_188+05-01" type="a"/>		
+ 	<edge id="fsalidacruce188+05-01" from="nod_188+05-01" to="fnod_188+05-01" type="a"/>		
+    <edge id="entradacruce188+05-01" from="nod_188+05-01" to="crc_188+05" type="a"/>   
+    <edge id="fentradacruce188+05-01" from="fnod_188+05-01" to="nod_188+05-01" type="a"/>  	
+	<edge id="salidacruce188+05-04" from="crc_188+05" to="nod_188+05-03" type="a"/>		
+	<edge id="fsalidacruce188+05-04" from="nod_188+05-03" to="fnod_188+05-03" type="a"/>		
+    <edge id="entradacruce188+05-03" from="nod_188+05-03" to="crc_188+05" type="a"/>	
+    <edge id="fentradacruce188+05-03" from="fnod_188+05-03" to="nod_188+05-03" type="a"/>		
+    <edge id="salidacruce188+05-04" from="crc_188+05" to="nod_188+05-04" type="a"/>		
+    <edge id="fsalidacruce188+05-04" from="nod_188+05-04" to="fnod_188+05-04" type="a"/>		
+    <edge id="entradacruce188+05-04" from="nod_188+05-04" to="crc_188+05" type="a"/>	
+    <edge id="fentradacruce188+05-04" from="fnod_188+05-04" to="nod_188+05-04" type="a"/>		
+
+    <edge id="salidacrucenacion+01-03" from="crc_nacion+01" to="nod_nacion+01-03" type="a"/>	
+    <edge id="fsalidacrucenacion+01-03" from="nod_nacion+01-03" to="fnod_nacion+01-03" type="a"/>	
+    <edge id="entradacrucenacion+01-03" from="nod_nacion+01-03" to="crc_nacion+01" type="a"/>	
+    <edge id="fentradacrucenacion+01-03" from="fnod_nacion+01-03" to="nod_nacion+01-03" type="a"/>	
+    <edge id="salidacrucenacion+01-04" from="crc_nacion+01" to="nod_nacion+01-04" type="a"/>	
+    <edge id="fsalidacrucenacion+01-04" from="nod_nacion+01-04" to="fnod_nacion+01-04" type="a"/>		
+    <edge id="entradacrucenacion+01-04" from="nod_nacion+01-04" to="crc_nacion+01" type="a"/>
+    <edge id="fentradacrucenacion+01-04" from="fnod_nacion+01-04" to="nod_nacion+01-04" type="a"/>	
+    <edge id="salidacrucenacion+02-03" from="crc_nacion+02" to="nod_nacion+02-03" type="a"/>	
+    <edge id="fsalidacrucenacion+02-03" from="nod_nacion+02-03" to="fnod_nacion+02-03" type="a"/>	
+    <edge id="entradacrucenacion+02-03" from="nod_nacion+02-03" to="crc_nacion+02" type="a"/>	
+    <edge id="fentradacrucenacion+02-03" from="fnod_nacion+02-03" to="nod_nacion+02-03" type="a"/>		
+    <edge id="salidacrucenacion+02-04" from="crc_nacion+02" to="nod_nacion+02-04" type="a"/>	
+    <edge id="fsalidacrucenacion+02-04" from="nod_nacion+02-04" to="fnod_nacion+02-04" type="a"/>	
+    <edge id="entradacrucenacion+02-04" from="nod_nacion+02-04" to="crc_nacion+02" type="a"/>	
+    <edge id="fentradacrucenacion+02-04" from="fnod_nacion+02-04" to="nod_nacion+02-04" type="a"/>		
+    <edge id="salidacrucenacion+03-03" from="crc_nacion+03" to="nod_nacion+03-03" type="a"/>		
+    <edge id="fsalidacrucenacion+03-03" from="nod_nacion+03-03" to="fnod_nacion+03-03" type="a"/>	
+    <edge id="entradacrucenacion+03-03" from="nod_nacion+03-03" to="crc_nacion+03" type="a"/>	
+    <edge id="fentradacrucenacion+03-03" from="fnod_nacion+03-03" to="nod_nacion+03-03" type="a"/>		
+    <edge id="salidacrucenacion+03-04" from="crc_nacion+03" to="nod_nacion+03-04" type="a"/>		
+    <edge id="fsalidacrucenacion+03-04" from="nod_nacion+03-04" to="fnod_nacion+03-04" type="a"/>	
+    <edge id="entradacrucenacion+03-04" from="nod_nacion+03-04" to="crc_nacion+03" type="a"/>	
+    <edge id="fentradacrucenacion+03-04" from="fnod_nacion+03-04" to="nod_nacion+03-04" type="a"/>	
+    <edge id="salidacrucenacion+04-03" from="crc_nacion+04" to="nod_nacion+04-03" type="a"/>	
+    <edge id="fsalidacrucenacion+04-03" from="nod_nacion+04-03" to="fnod_nacion+04-03" type="a"/>		
+    <edge id="entradacrucenacion+04-03" from="nod_nacion+04-03" to="crc_nacion+04" type="a"/>	
+    <edge id="fentradacrucenacion+04-03" from="fnod_nacion+04-03" to="nod_nacion+04-03" type="a"/>	
+    <edge id="salidacrucenacion+04-04" from="crc_nacion+04" to="nod_nacion+04-04" type="a"/>	
+    <edge id="fsalidacrucenacion+04-04" from="nod_nacion+04-04" to="fnod_nacion+04-04" type="a"/>		
+    <edge id="entradacrucenacion+04-04" from="nod_nacion+04-04" to="crc_nacion+04" type="a"/>	
+    <edge id="fentradacrucenacion+04-04" from="fnod_nacion+04-04" to="nod_nacion+04-04" type="a"/>	
+ 	<edge id="salidacrucenacion+05-01" from="crc_nacion+05" to="nod_nacion+05-01" type="a"/>	
+ 	<edge id="fsalidacrucenacion+05-01" from="nod_nacion+05-01" to="fnod_nacion+05-01" type="a"/>	
+    <edge id="entradacrucenacion+05-01" from="nod_nacion+05-01" to="crc_nacion+05" type="a"/>   
+    <edge id="fentradacrucenacion+05-01" from="fnod_nacion+05-01" to="nod_nacion+05-01" type="a"/>  	
+	<edge id="salidacrucenacion+05-03" from="crc_nacion+05" to="nod_nacion+05-03" type="a"/>	
+	<edge id="fsalidacrucenacion+05-03" from="nod_nacion+05-03" to="fnod_nacion+05-03" type="a"/>		
+    <edge id="entradacrucenacion+05-03" from="nod_nacion+05-03" to="crc_nacion+05" type="a"/>	
+    <edge id="fentradacrucenacion+05-03" from="fnod_nacion+05-03" to="nod_nacion+05-03" type="a"/>	
+    <edge id="salidacrucenacion+05-04" from="crc_nacion+05" to="nod_nacion+05-04" type="a"/>	
+    <edge id="fsalidacrucenacion+05-04" from="nod_nacion+05-04" to="fnod_nacion+05-04" type="a"/>	
+    <edge id="entradacrucenacion+05-04" from="nod_nacion+05-04" to="crc_nacion+05" type="a"/>
+    <edge id="fentradacrucenacion+05-04" from="fnod_nacion+05-04" to="nod_nacion+05-04" type="a"/>	
+
+	
+</edges>

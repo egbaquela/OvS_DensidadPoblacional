@@ -1,0 +1,3 @@
+Loading configuration... done.
+Warning: 'no' is deprecated, please use 'number' instead.
+Success.

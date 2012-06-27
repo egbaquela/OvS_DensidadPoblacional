@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+
+<flows>
+    <flow id="0" from="fentradaSid02-03" to="fsalidacruce188+05-04" begin="0" end="3600" no="3000"/>
+    <flow id="1" from="fentradaSid02-03" to="fsalidacruceillia01-04" begin="0" end="3600" no="3000"/>		
+</flows>

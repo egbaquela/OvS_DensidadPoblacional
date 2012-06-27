@@ -1,0 +1,30 @@
+***********************************************************
+*                                                         *
+* Optimización Distribución Espacial de Origen y Destinos *
+*                                                         *
+* Autor: Baquela, Enrique Gabriel                         *  
+* Website: http://www.egbaquela.com.ar                    *
+* E-Mail: egbaquela@hotmail.com                           *
+*                                                         *
+***********************************************************
+
+Los archivos de densidad posible de orígenes y destinos 
+son archivos con extensión .dop.xml y .ddp.xml.
+Su estructura es:
+
+<edges>
+	<edge id="name" dMin= "densidad_minima" 
+		dMax="densidad_maxima"\>
+<edges>
+Los archivos de densidad optimizada de orígenes y 
+destinos son archivos con extensión .doo.xml y .ddo.xml.
+Su estructura es:
+
+<edges>
+	<edge id="name" dOpt= "densidad_optimizada" 
+		\>
+<edges>
+
+Dado que los nodos tienen un tamaño infinitesimal, se 
+la densidad se trata como cantidad total vehiculos 
+que inician o finalizan su viaje en el nodo.

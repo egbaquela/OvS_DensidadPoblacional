@@ -1,0 +1,39 @@
+***********************************************************
+*                                                         *
+* Optimización Distribución Espacial de Origen y Destinos *
+*                                                         *
+* Autor: Baquela, Enrique Gabriel                         *
+* Website: http://www.egbaquela.com.ar                    *
+* E-Mail: egbaquela@hotmail.com                           *
+*                                                         *
+***********************************************************
+
+1 - Objetivo: 
+Desarrollar un algoritmo de OvS que optimice la 
+distribución geográfica de origenes y destinos de
+demanda de tráfico. Se emplea SUMO como proxy de la 
+función de FITNESS y Python como coordinador del proceso 
+de OvS y gestor del optimizador.
+Dado un mapa y tablas que indiquen la densidad 
+poblacional máxima y mínima posible para cada nodo de 
+inicio y fin de viajes, se desea generar la mejor 
+asignación de población para orígenes y destinos.
+
+2 - Mapa utilizado: 
+Se confeccionó un mapa esquemático del 
+circuito de tráfico de San Nicolás de los Arroyos.
+
+3 - Inputs y Outputs:
+3.1 - Inputs:
+	* Archivo de red en formato SUMO (*.net.xml).
+	* Tabla de orígenes y destinos posibles con rango 
+densidad de población (*.dop.xml y *ddp.xml 
+respectivamente).
+	* Población a distribuir.
+
+3.2 - Outputs:
+	* Tabla de orígenes y destinos posibles con  
+densidad de población optimizada (*.doo.xml y *ddo.xml 
+respectivamente).
+	* Resumen con tiempos de tránsito de origen a 
+destino.

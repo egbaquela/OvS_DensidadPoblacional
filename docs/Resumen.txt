@@ -1,0 +1,25 @@
+La planeación urbana es el conjunto de actividades de planeamiento tendientes a pensar el futuro de una urbe en sus múltiples dimensiones. Este es un problema de decisión multihorizonte, con variables de decisión con múltiples niveles de agregación y un comportamiento global estocástico. 
+Un subproblema bastante importante consiste en donde fomentar el establecimientos de centro habitacionales y centros demandantes de factor humano (en general, lugares de trabajo) sin modificar la estructura principal de la red de tráfico. Modificar en forma significativa una red de tráfico implica cuantiosas inversiones de fondos públicos en construcción de carreteras, avenidas y calles, puentes, resarcimientos por expropiación de terrenos, etc. Sin embargo, a mediano plazo se puede controlar la manera en que se utiliza esa red mediante el fomento de construcciones hogareñas e industriales en áreas determinadas, ya sea actualmente disponibles para esos usos o bien nuevas áreas baldías sobre la cual invertir en construcción.
+El problema de determinar la forma de utilización de la red de tráfico actual mediante el fomento del establecimiento de zonas residenciales oe industriales es un problema de programación matemática estocástica de formulación matemática compleja y de múltiples soluciones. Las variables de decisión son el incremento de la población hogareña y el incremento de necesidad de personal, ambos tipos por zona de densidad modificable. Los valores de estas variables está restringidos a valores maximos y mínimos de incrementos (que representan la población actual y la capacidad máxima de cada área) y la suma de dichas variables está acotada por el valor previsto de incremento poblacional y/o de requermientos de personal en el mediano plazo. Si bien el problema es de programación entera, no afecta al resultado aproximarlo mediante variables continuas, ya que una unidad es varias magnitudes inferiores al valor de las variables. En lo que respecta al modelado del sistema de tráfico en si, tenemos las restricciones de flujo. Pero lo complicado de calcular es la función objetivo. Asumido un indicar asociado al uso de la red de tráfico (como por ejemplo, la demora promedio en toda la ruta), resulta que las distancias de nodo a nodo, en términos de tiempo, son funciones de la saturación de la red de tráfico. Por lo cual, los coeficientes de la función objetivo son funciones de las variables de decisión que afectan. Es por este último problema, que resulta mas práctico estimar la función objetivo mediante un modelo de simulación.
+
+Formulación del problema:
+
+Min F(x, y) = E(g(x,y))
+
+sujeto a 
+
+x>= dMin
+x<= dMax
+y>= dMin
+y<= dMax
+
+sum(x) = x_target
+sum(y) = y_target
+sum(x) - sum(y) = 0
+
++ restricciones de flujo
+
+Las restricciones de flujo y la función objetivo se aproximan mediante un modelo de simulación, que en el caso de la función objetivo nos abstrae del hecho que los coeficintes de la misma sean variables. Por otro lado, hay que notar que, controlando solo la población y la demanda de personal en los nodos, tenemos mas de un flujo asociado, cuya aleatoriedad viene dado por el hecho que no podemos determinar a priori a que centro de demanda de personal se dirigirá un habitante del un nodo en cuestión. Sin embargo, a priori cada nodo de población debería tener una probabilidad uniforme para rutear a cada nodo de demanda, así que es una buena aproximación distribuir los flujos equitativamente. El único condicionante a este son los nodos que representan al factor humano habitante de otras urbes éro que trabajan en la estudiada.
+
+
+

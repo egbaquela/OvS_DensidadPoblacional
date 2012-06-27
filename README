@@ -1,0 +1,17 @@
+******************************************************************
+*
+* Optimizador vía Simulación de densidad poblacional mediante
+* simulación de tráfico.
+*
+* Autor: E. G. Baquela - http://www.egbaquela.com.ar
+* Fecha de creación: 2012-06-18
+*
+* Trabajo para tesis de Doctorado en Informática
+* Directora de tesis: Olivera, Ana Carolina
+* Co-Directora de tesis: Cerrano, Marta Liliana
+*
+******************************************************************
+
+Proyecto para construir una aplicación de Optimización vía 
+Simulación para planificar el creceimiento futuro de una ciudad,
+en base a la saturación de sus vías de tráfico existentes.
