@@ -26,7 +26,7 @@
     <edge id="fsalidacruce+02-01" dMin="0" dMax="0"/>		
     <edge id="fentradacruce+02-01" dMin="50" dMax="100"/>	
     <edge id="fsalidacruce+02-02" dMin="0" dMax="0"/>	
-    <edge id="fentradacruce+02-02" dMin="50" dMax="0"/>	
+    <edge id="fentradacruce+02-02" dMin="50" dMax="100"/>	
     <edge id="fsalidacrucenacion-02" dMin="0" dMax="0"/>		
     <edge id="fentradacrucenacion-02" dMin="0" dMax="0"/>		
     <edge id="fsalidacrucepostnacion01-01" dMin="0" dMax="0"/>		

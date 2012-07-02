@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+﻿#-------------------------------------------------------------------------------
 # Name:        module1
 # Purpose:
 #
@@ -35,7 +35,7 @@ def processTrips(trips):
 
 def generateTripsStats(trips):
 #-------------------------------------------------------------------------------
-# Consolida estadÃƒÂ­sticas de cada viaje.
+# Consolida estadísticas de cada viaje.
 # Actualmente, solo devuelve el tiempo promedio de cada viaje.
 #-------------------------------------------------------------------------------
     sumOfTripTime = 0
@@ -47,17 +47,17 @@ def generateTripsStats(trips):
 
 def evaluateSolution():
 #-------------------------------------------------------------------------------
-# Evalúa si la solución es óptima. Devuelve TRUE si se halló el óptimo, sinó
-# FALSE.
+# Evalúa si la solución es óptima. Devuelve True si se halla el óptimo, sino³
+# False.
 #-------------------------------------------------------------------------------
-    result= FALSE
+    return False
 
 def main():
 #-------------------------------------------------------------------------------
 # TO-DO: Hacer que el parser XML pueda leer la salida como la genera el SUMO
 # (es decir, con el primer nodo que sea de comentarios).
 # Ideas: 1) hacer que detecte si el primer nodo es de comentario y avanzar al
-# siguiente, 2)hacer que le tenga que pasar como parÃƒÂ¡metro el nombre del nodo
+# siguiente, 2)hacer que le tenga que pasar como pará¡metro el nombre del nodo
 # del cual quiero obtener sus hijos
 #-------------------------------------------------------------------------------
     myTrips = XMLProcessor.getNodeListFromXML("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml", "tripinfo")

@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+﻿#-------------------------------------------------------------------------------
 # Name:        module1
 # Purpose:
 #
@@ -15,8 +15,11 @@ import flowGenerator
 import outputAnalysis
 
 def main():
-    origen = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml")
-    destino = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.ddp.xml")
+    origen = flowGenerator.cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml")
+    destino = flowGenerator.cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.ddp.xml")
+    origenNormalizado= flowGenerator.normalize(origen, 2000)
+    destinoNormalizado = flowGenerator.normalize(destino, 2000)
+
     routeFilePath= "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido"
     sumocfgPath = "D:\Compartido\Proyectos\SUMO\OvS_DensidadPoblacional\models\\SNResumido.sumo.cfg"
     duaroutercfgPath = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido.ruoc.cfg"
@@ -27,22 +30,26 @@ def main():
     sumoInterface.setDuarouterLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
 
 
-    flowGenerator.generateFlowsInXML(origen, destino, routeFilePath)
+    flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
     sumoInterface.runDuarouter(duaroutercfgPath)
 
     i=0
-    optimalSolution = FALSE
+    optimalSolution = False
     while not(optimalSolution):
         sumoInterface.runSumoSimulation(sumocfgPath)
         if outputAnalysis.evaluateSolution():
-            optimalSolution = TRUE
+            optimalSolution = True
         else:
             i=i+1
             if (i==5):
                 break
-            #generateNewSolutions()
+            origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado)
+            destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado)
+            flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
+            sumoInterface.runDuarouter(duaroutercfgPath)
 
-    print("SoluciÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â³n Encontrada")
+
+    print("Solución Encontrada")
     pass
 
 if __name__ == '__main__':

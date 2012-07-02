@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+﻿#-------------------------------------------------------------------------------
 # Name:        module1
 # Purpose:
 #
@@ -23,52 +23,68 @@ netconvertPath = ""
 netconvertLogPath = ""
 
 def setSumoPath(path):
+    global sumoPath
     sumoPath = path
 
 def getSumoPath():
+    global sumoPath
     return sumoPath
 
 def setSumoLogPath(path):
+    global sumoLogPath
     sumoLogPath = path
 
 def getSumoLogPath():
+    global sumoLogPath
     return sumoLogPath
 
 def setDuarouterPath(path):
+    global duarouterPath
     duarouterPath = path
 
 def getDuarouterPath():
+    global duarouterPath
     return duarouterPath
 
 def setDuarouterLogPath(path):
+    global duarouterLogPath
     duarouterLogPath = path
 
 def getDuarouterLogPath():
-    return netconvertLogPath
+    global duarouterLogPath
+    return duarouterLogPath
 
 def setNetconvertPath(path):
+    global netconvertPath
     netconvertPath = path
 
 def getNetconvertPath():
+    global netconvertPath
     return duarouterPath
 
 def setNetconvertLogPath(path):
+    global netconvertLogPath
     netconvertLogPath = path
 
 def getNetconvertLogPath():
+    global netconvertLogPath
     return netconvertLogPath
 
 
 def runSumoSimulation(sumocfgPath):
-    commandSumo = [getSumoPath(), "-c",sumocfgPath]
-    log = open(getSumoLogPath(), "w+")
+    commandSumo = ["D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\sumo-gui.exe", "-c",sumocfgPath]
+    log = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log", "w+")
+    #commandSumo = [getSumoPath(), "-c",sumocfgPath]
+    #log = open(getSumoLogPath(), "w+")
     log.flush()
     retCode = subprocess.call(commandSumo, stdout=log, stderr=log)
     log.close
 
 def runDuarouter(duaroutercfgPath):
-    commandDuarouter = [getDuarouterPath(), "-c",duaroutercfgPath]
-    log = open(getDuarouterLogPath(), "w+")
+    commandDuarouter = ["D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe", "-c",duaroutercfgPath]
+    log = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log", "w+")
+    #commandDuarouter = [getDuarouterPath(), "-c",duaroutercfgPath]
+    #log = open(getDuarouterLogPath(), "w+")
     log.flush()
     retCode = subprocess.call(commandDuarouter, stdout=log, stderr=log)
     log.close

@@ -1,4 +1,4 @@
-#-------------------------------------------------------------------------------
+﻿#-------------------------------------------------------------------------------
 # Name:        module1
 # Purpose:
 #
@@ -11,9 +11,9 @@
 #!/usr/bin/env python
 
 #-------------------------------------------------------------------------------
-# MÃƒÆ’Ã‚Â³dulo para procesar matrices formadas por listas incluidas en listas.
+# Módulo para procesar matrices formadas por listas incluidas en listas.
 # Una lista-matriz es una lista incluida como campo en otra lista.
-# El ÃƒÆ’Ã‚Â­ndice de la lista externa representa a las filas (los registros) y
+# El índice de la lista externa representa a las filas (los registros) y
 # los de las listas anidades a las columnas (campos). Los valores de la lista
 # interna son los datos almacenados para ese registro y campo.
 # Las matrices difinidas de esta forma no tienen que ser rectangulares
@@ -26,18 +26,15 @@ def isNumber(x):
         return False
     return True
 
-def sumCols(auxListMatrix, auxRowFrom, auxRowTo):
-    sumOfTheCols= [0]*(auxRowTo-auxRowFrom)
+def sumCols(auxListMatrix, auxColFrom, auxColTo):
+    sumOfTheCols= [0]*(auxColTo-auxColFrom+1)
 
     for myRow in auxListMatrix:
         i=0
-        for myData in myRow[auxRowFrom:auxRowTo]:
+        for myData in myRow[auxColFrom:(auxColTo+1)]:
             sumOfTheCols[i] = int(sumOfTheCols[i]) + int(myData)
             i=i+1
-
     return sumOfTheCols
-
-
 
 def sumRows(auxListMatrix):
     sumOfTheRows=[]
@@ -49,7 +46,6 @@ def sumRows(auxListMatrix):
             sumOfTheRows[i] = int(sumOfTheRows[i]) + int(myValue)
         i= i+1
     return sumOfTheRows
-
 
 def main():
     row1 = [1,2,3]
@@ -67,7 +63,7 @@ def main():
     print("Suma de filas")
     print(sumRows(listMatrix))
     print("Suma de columnas")
-    print(sumCols(listMatrix, 0, (len(listMatrix)-1)))
+    print(sumCols(listMatrix, 0, (len(listMatrix[0])-1)))
     pass
 
 if __name__ == '__main__':
