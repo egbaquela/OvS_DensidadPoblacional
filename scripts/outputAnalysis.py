@@ -47,10 +47,20 @@ def generateTripsStats(trips):
 
 def evaluateSolution():
 #-------------------------------------------------------------------------------
-# Evalúa si la solución es óptima. Devuelve True si se halla el óptimo, sino³
-# False.
+# Calcula el valor de la función FITNESS
 #-------------------------------------------------------------------------------
-    return False
+    return 0
+
+def compareSolutions(solutionOne, solutionTwo, indiferenceFactor):
+#-------------------------------------------------------------------------------
+# Determinada cual de las dos soluciones es la mejor
+#-------------------------------------------------------------------------------
+    if abs(((solutionOne[SOLUTION_FITNESS_VALUE]-solutionTwo[SOLUTION_FITNESS_VALUE])/solutionTwo[SOLUTION_FITNESS_VALUE])<indiferenceFactor):
+        return BOTH_SOLUTIONS_ARE_EQUALS
+    elif ((solutionOne[SOLUTION_FITNESS_VALUE]-solutionTwo[SOLUTION_FITNESS_VALUE])>0):
+        return SECOND_SOLUTION_IS_BETTER
+    else:
+        return FIRST_SOLUTION_IS_BETTER
 
 def main():
 #-------------------------------------------------------------------------------
