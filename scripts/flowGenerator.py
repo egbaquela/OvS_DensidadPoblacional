@@ -107,17 +107,19 @@ def generateFlows(auxFrom, auxTo):
 
     for origin in auxFrom:
         for destination in auxTo:
-            thisFlow = []
-            thisFlow.append(origin[NODE_ID_INDEX])
-            thisFlow.append(destination[NODE_ID_INDEX])
-            thisFlow.append(0)
-            thisFlow.append(300)
-            thisFlow.append(round(origin[NODE_DENSITY_TRG_INDEX]*destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
-            origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
-            destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
-            myFlows.append([thisFlow[FLOW_ID_FROM_INDEX],thisFlow[FLOW_ID_TO_INDEX], \
-            thisFlow[FLOW_START_TIME_INDEX],thisFlow[FLOW_END_TIME_INDEX], \
-            thisFlow[FLOW_QUANTITY_INDEX]])
+            quantityToRoute = round(origin[NODE_DENSITY_TRG_INDEX]*(destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
+            if (quantityToRoute>0):
+                thisFlow = []
+                thisFlow.append(origin[NODE_ID_INDEX])
+                thisFlow.append(destination[NODE_ID_INDEX])
+                thisFlow.append(0)
+                thisFlow.append(300)
+                thisFlow.append(quantityToRoute)
+                origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
+                destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
+                myFlows.append([thisFlow[FLOW_ID_FROM_INDEX],thisFlow[FLOW_ID_TO_INDEX], \
+                thisFlow[FLOW_START_TIME_INDEX],thisFlow[FLOW_END_TIME_INDEX], \
+                thisFlow[FLOW_QUANTITY_INDEX]])
     return myFlows
 
 def saveFlowsInXML(auxFlows, auxFilename):
