@@ -34,6 +34,9 @@ def main():
     sumoInterface.setDuarouterPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe")
     sumoInterface.setDuarouterLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
 
+    #Creo/abro el archivo para grabar las soluciones encontradas
+    fd = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\output.log", "a")
+
     #Genero la población inicial de soluciones
     bestSolutions=[]
     thisSolution=[]
@@ -49,6 +52,7 @@ def main():
         #Evalúo la solución y, si es buena, la agrego a la lista de buenas soluciones
         sumoInterface.runSumoSimulation(sumocfgPath)
         thisSolution = [origenNormalizado, destinoNormalizado, outputAnalysis.evaluateSolution(outputTrips)]
+        print(str(thisSolution[SOLUTION_FITNESS_VALUE_INDEX]), file = fd)
         if len(bestSolutions)<10:
             bestSolutions.append([thisSolution[SOLUTION_ORIGIN_INDEX], thisSolution[SOLUTION_DESTINATION_INDEX], thisSolution[SOLUTION_FITNESS_VALUE_INDEX]])
         else:
@@ -65,6 +69,7 @@ def main():
 
 
     print("Solución Encontrada")
+    fd.close
     pass
 
 if __name__ == '__main__':
