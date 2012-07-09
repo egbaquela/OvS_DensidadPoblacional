@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
-<!-- generated on 04/07/2012 12:25:31 p.m. by SUMO gui Version 0.13.1
+<!-- generated on 07/08/12 22:18:52 by SUMO sumo Version 0.13.1
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/sumo-gui.exeConfiguration.xsd">
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.sf.net/xsd/sumoConfiguration.xsd">
 
     <input>
         <net-file value="D:\Compartido\Proyectos\SUMO\OvS_DensidadPoblacional\models\nets\SNResumido.net.xml"/>
@@ -18,7 +18,7 @@
 
     <time>
         <begin value="0"/>
-        <end value="6000"/>
+        <end value="500"/>
     </time>
 
     <processing>
@@ -29,186 +29,4 @@
 -->
 
 <tripinfos>
-    <tripinfo id="0_0" depart="0.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="0.00" arrival="803.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.25" arrivalSpeed="13.56" duration="803.00" routeLength="10252.95" waitSteps="0" rerouteNo="0" devices="vehroute_0_0 tripinfo_0_0" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_1" depart="6.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="5.00" arrival="814.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.19" arrivalSpeed="12.80" duration="808.00" routeLength="10253.89" waitSteps="0" rerouteNo="0" devices="vehroute_0_1 tripinfo_0_1" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_2" depart="12.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="10.00" arrival="821.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.45" arrivalSpeed="13.40" duration="809.00" routeLength="10253.15" waitSteps="0" rerouteNo="0" devices="vehroute_0_2 tripinfo_0_2" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_3" depart="17.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="13.00" arrival="825.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.94" arrivalSpeed="13.53" duration="808.00" routeLength="10256.64" waitSteps="0" rerouteNo="0" devices="vehroute_0_3 tripinfo_0_3" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_4" depart="24.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="19.00" arrival="832.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.30" arrivalSpeed="13.42" duration="808.00" routeLength="10253.00" waitSteps="0" rerouteNo="0" devices="vehroute_0_4 tripinfo_0_4" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_5" depart="30.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="24.00" arrival="837.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.19" arrivalSpeed="12.60" duration="807.00" routeLength="10255.89" waitSteps="0" rerouteNo="0" devices="vehroute_0_5 tripinfo_0_5" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_6" depart="36.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="29.00" arrival="845.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.35" arrivalSpeed="12.72" duration="809.00" routeLength="10254.05" waitSteps="0" rerouteNo="0" devices="vehroute_0_6 tripinfo_0_6" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_7" depart="42.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="34.00" arrival="851.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.70" arrivalSpeed="13.66" duration="809.00" routeLength="10253.40" waitSteps="0" rerouteNo="0" devices="vehroute_0_7 tripinfo_0_7" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_8" depart="48.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="38.00" arrival="859.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.24" arrivalSpeed="13.49" duration="811.00" routeLength="10259.94" waitSteps="0" rerouteNo="0" devices="vehroute_0_8 tripinfo_0_8" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_9" depart="55.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="44.00" arrival="864.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="4.22" arrivalSpeed="13.35" duration="809.00" routeLength="10256.92" waitSteps="0" rerouteNo="0" devices="vehroute_0_9 tripinfo_0_9" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_10" depart="61.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="49.00" arrival="870.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="8.69" arrivalSpeed="13.85" duration="809.00" routeLength="10261.39" waitSteps="0" rerouteNo="0" devices="vehroute_0_10 tripinfo_0_10" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_11" depart="67.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="54.00" arrival="878.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="6.57" arrivalSpeed="13.17" duration="811.00" routeLength="10259.27" waitSteps="0" rerouteNo="0" devices="vehroute_0_11 tripinfo_0_11" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_12" depart="73.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="59.00" arrival="885.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="9.17" arrivalSpeed="12.69" duration="812.00" routeLength="10261.87" waitSteps="0" rerouteNo="0" devices="vehroute_0_12 tripinfo_0_12" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_13" depart="79.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="63.00" arrival="890.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="4.99" arrivalSpeed="13.70" duration="811.00" routeLength="10257.69" waitSteps="0" rerouteNo="0" devices="vehroute_0_13 tripinfo_0_13" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_14" depart="85.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="68.00" arrival="898.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.57" arrivalSpeed="13.75" duration="813.00" routeLength="10253.27" waitSteps="0" rerouteNo="0" devices="vehroute_0_14 tripinfo_0_14" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_15" depart="91.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="73.00" arrival="904.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.06" arrivalSpeed="13.51" duration="813.00" routeLength="10255.76" waitSteps="0" rerouteNo="0" devices="vehroute_0_15 tripinfo_0_15" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_16" depart="97.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="78.00" arrival="909.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.93" arrivalSpeed="12.64" duration="812.00" routeLength="10254.63" waitSteps="0" rerouteNo="0" devices="vehroute_0_16 tripinfo_0_16" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_17" depart="103.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="83.00" arrival="917.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.50" arrivalSpeed="13.88" duration="814.00" routeLength="10254.20" waitSteps="0" rerouteNo="0" devices="vehroute_0_17 tripinfo_0_17" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_18" depart="109.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="87.00" arrival="925.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.01" arrivalSpeed="13.52" duration="816.00" routeLength="10259.71" waitSteps="0" rerouteNo="0" devices="vehroute_0_18 tripinfo_0_18" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_19" depart="115.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="92.00" arrival="929.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="9.97" arrivalSpeed="13.74" duration="814.00" routeLength="10262.67" waitSteps="0" rerouteNo="0" devices="vehroute_0_19 tripinfo_0_19" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_20" depart="121.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="97.00" arrival="935.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.45" arrivalSpeed="12.67" duration="814.00" routeLength="10255.15" waitSteps="0" rerouteNo="0" devices="vehroute_0_20 tripinfo_0_20" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_21" depart="127.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="102.00" arrival="941.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.33" arrivalSpeed="13.73" duration="814.00" routeLength="10253.03" waitSteps="0" rerouteNo="0" devices="vehroute_0_21 tripinfo_0_21" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_22" depart="133.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="107.00" arrival="947.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.78" arrivalSpeed="13.85" duration="814.00" routeLength="10255.48" waitSteps="0" rerouteNo="0" devices="vehroute_0_22 tripinfo_0_22" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_23" depart="139.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="111.00" arrival="954.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.71" arrivalSpeed="12.63" duration="815.00" routeLength="10253.41" waitSteps="0" rerouteNo="0" devices="vehroute_0_23 tripinfo_0_23" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_24" depart="145.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="116.00" arrival="960.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.43" arrivalSpeed="12.62" duration="815.00" routeLength="10254.13" waitSteps="0" rerouteNo="0" devices="vehroute_0_24 tripinfo_0_24" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_25" depart="151.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="121.00" arrival="966.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.95" arrivalSpeed="13.16" duration="815.00" routeLength="10256.65" waitSteps="0" rerouteNo="0" devices="vehroute_0_25 tripinfo_0_25" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_26" depart="157.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="126.00" arrival="973.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="5.95" arrivalSpeed="13.73" duration="816.00" routeLength="10258.65" waitSteps="0" rerouteNo="0" devices="vehroute_0_26 tripinfo_0_26" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_27" depart="164.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="132.00" arrival="980.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.51" arrivalSpeed="13.02" duration="816.00" routeLength="10256.21" waitSteps="0" rerouteNo="0" devices="vehroute_0_27 tripinfo_0_27" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_28" depart="170.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="136.00" arrival="984.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.88" arrivalSpeed="13.48" duration="814.00" routeLength="10255.58" waitSteps="0" rerouteNo="0" devices="vehroute_0_28 tripinfo_0_28" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_29" depart="176.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="141.00" arrival="990.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.80" arrivalSpeed="12.91" duration="814.00" routeLength="10255.50" waitSteps="0" rerouteNo="0" devices="vehroute_0_29 tripinfo_0_29" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_30" depart="182.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="146.00" arrival="996.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.74" arrivalSpeed="13.56" duration="814.00" routeLength="10255.44" waitSteps="0" rerouteNo="0" devices="vehroute_0_30 tripinfo_0_30" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_31" depart="188.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="151.00" arrival="1003.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.07" arrivalSpeed="13.14" duration="815.00" routeLength="10253.77" waitSteps="0" rerouteNo="0" devices="vehroute_0_31 tripinfo_0_31" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_32" depart="195.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="157.00" arrival="1009.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.04" arrivalSpeed="12.73" duration="814.00" routeLength="10252.74" waitSteps="0" rerouteNo="0" devices="vehroute_0_32 tripinfo_0_32" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_33" depart="201.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="161.00" arrival="1018.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.72" arrivalSpeed="13.71" duration="817.00" routeLength="10253.42" waitSteps="0" rerouteNo="0" devices="vehroute_0_33 tripinfo_0_33" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_34" depart="207.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="166.00" arrival="1025.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="8.74" arrivalSpeed="13.77" duration="818.00" routeLength="10261.44" waitSteps="0" rerouteNo="0" devices="vehroute_0_34 tripinfo_0_34" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_35" depart="213.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="171.00" arrival="1030.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.23" arrivalSpeed="13.78" duration="817.00" routeLength="10252.93" waitSteps="0" rerouteNo="0" devices="vehroute_0_35 tripinfo_0_35" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_36" depart="219.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="176.00" arrival="1036.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.51" arrivalSpeed="13.29" duration="817.00" routeLength="10255.21" waitSteps="0" rerouteNo="0" devices="vehroute_0_36 tripinfo_0_36" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_37" depart="225.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="181.00" arrival="1044.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.97" arrivalSpeed="13.22" duration="819.00" routeLength="10255.67" waitSteps="0" rerouteNo="0" devices="vehroute_0_37 tripinfo_0_37" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_38" depart="231.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="185.00" arrival="1051.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.16" arrivalSpeed="13.46" duration="820.00" routeLength="10252.86" waitSteps="0" rerouteNo="0" devices="vehroute_0_38 tripinfo_0_38" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_39" depart="237.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="190.00" arrival="1058.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.06" arrivalSpeed="13.60" duration="821.00" routeLength="10259.76" waitSteps="0" rerouteNo="0" devices="vehroute_0_39 tripinfo_0_39" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_40" depart="244.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="196.00" arrival="1063.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.88" arrivalSpeed="13.45" duration="819.00" routeLength="10255.58" waitSteps="0" rerouteNo="0" devices="vehroute_0_40 tripinfo_0_40" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_41" depart="250.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="201.00" arrival="1070.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="5.45" arrivalSpeed="13.09" duration="820.00" routeLength="10258.15" waitSteps="0" rerouteNo="0" devices="vehroute_0_41 tripinfo_0_41" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_42" depart="256.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="206.00" arrival="1076.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.16" arrivalSpeed="13.29" duration="820.00" routeLength="10259.86" waitSteps="0" rerouteNo="0" devices="vehroute_0_42 tripinfo_0_42" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_43" depart="262.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="210.00" arrival="1081.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="5.43" arrivalSpeed="13.78" duration="819.00" routeLength="10258.13" waitSteps="0" rerouteNo="0" devices="vehroute_0_43 tripinfo_0_43" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_44" depart="268.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="215.00" arrival="1088.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="4.87" arrivalSpeed="13.10" duration="820.00" routeLength="10257.57" waitSteps="0" rerouteNo="0" devices="vehroute_0_44 tripinfo_0_44" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_45" depart="274.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="220.00" arrival="1095.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.65" arrivalSpeed="12.72" duration="821.00" routeLength="10253.35" waitSteps="0" rerouteNo="0" devices="vehroute_0_45 tripinfo_0_45" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_46" depart="280.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="225.00" arrival="1100.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.60" arrivalSpeed="13.46" duration="820.00" routeLength="10256.30" waitSteps="0" rerouteNo="0" devices="vehroute_0_46 tripinfo_0_46" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_47" depart="286.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="230.00" arrival="1106.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.43" arrivalSpeed="13.09" duration="820.00" routeLength="10260.13" waitSteps="0" rerouteNo="0" devices="vehroute_0_47 tripinfo_0_47" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_48" depart="292.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="234.00" arrival="1113.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.21" arrivalSpeed="13.34" duration="821.00" routeLength="10259.91" waitSteps="0" rerouteNo="0" devices="vehroute_0_48 tripinfo_0_48" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_49" depart="298.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="239.00" arrival="1119.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="4.10" arrivalSpeed="13.78" duration="821.00" routeLength="10256.80" waitSteps="0" rerouteNo="0" devices="vehroute_0_49 tripinfo_0_49" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_50" depart="304.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="244.00" arrival="1126.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="9.76" arrivalSpeed="13.21" duration="822.00" routeLength="10262.46" waitSteps="0" rerouteNo="0" devices="vehroute_0_50 tripinfo_0_50" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_0" depart="3.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="3.00" arrival="1133.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="4.39" arrivalSpeed="13.72" duration="1130.00" routeLength="14302.58" waitSteps="0" rerouteNo="0" devices="vehroute_1_0 tripinfo_1_0" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_51" depart="310.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="249.00" arrival="1133.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.80" arrivalSpeed="13.03" duration="823.00" routeLength="10255.50" waitSteps="0" rerouteNo="0" devices="vehroute_0_51 tripinfo_0_51" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_52" depart="316.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="254.00" arrival="1138.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.19" arrivalSpeed="13.40" duration="822.00" routeLength="10252.89" waitSteps="0" rerouteNo="0" devices="vehroute_0_52 tripinfo_0_52" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_1" depart="9.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="8.00" arrival="1140.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="4.55" arrivalSpeed="12.86" duration="1131.00" routeLength="14302.74" waitSteps="0" rerouteNo="0" devices="vehroute_1_1 tripinfo_1_1" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_2" depart="14.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="12.00" arrival="1144.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="0.55" arrivalSpeed="12.65" duration="1130.00" routeLength="14298.74" waitSteps="0" rerouteNo="0" devices="vehroute_1_2 tripinfo_1_2" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_53" depart="322.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="258.00" arrival="1145.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.53" arrivalSpeed="13.09" duration="823.00" routeLength="10254.23" waitSteps="0" rerouteNo="0" devices="vehroute_0_53 tripinfo_0_53" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_54" depart="328.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="263.00" arrival="1152.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="9.23" arrivalSpeed="13.18" duration="824.00" routeLength="10261.93" waitSteps="0" rerouteNo="0" devices="vehroute_0_54 tripinfo_0_54" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_3" depart="20.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="16.00" arrival="1154.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="9.80" arrivalSpeed="13.32" duration="1134.00" routeLength="14307.99" waitSteps="0" rerouteNo="0" devices="vehroute_1_3 tripinfo_1_3" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_55" depart="334.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="268.00" arrival="1156.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.85" arrivalSpeed="13.64" duration="822.00" routeLength="10254.55" waitSteps="0" rerouteNo="0" devices="vehroute_0_55 tripinfo_0_55" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_4" depart="27.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="22.00" arrival="1157.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.20" arrivalSpeed="12.90" duration="1130.00" routeLength="14301.39" waitSteps="0" rerouteNo="0" devices="vehroute_1_4 tripinfo_1_4" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_56" depart="340.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="273.00" arrival="1163.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="2.41" arrivalSpeed="13.85" duration="823.00" routeLength="10255.11" waitSteps="0" rerouteNo="0" devices="vehroute_0_56 tripinfo_0_56" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_5" depart="33.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="27.00" arrival="1166.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="9.20" arrivalSpeed="13.75" duration="1133.00" routeLength="14307.39" waitSteps="0" rerouteNo="0" devices="vehroute_1_5 tripinfo_1_5" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_57" depart="346.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="278.00" arrival="1170.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.77" arrivalSpeed="13.57" duration="824.00" routeLength="10260.47" waitSteps="0" rerouteNo="0" devices="vehroute_0_57 tripinfo_0_57" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_58" depart="352.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="282.00" arrival="1175.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="9.10" arrivalSpeed="13.42" duration="823.00" routeLength="10261.80" waitSteps="0" rerouteNo="0" devices="vehroute_0_58 tripinfo_0_58" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_6" depart="39.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="32.00" arrival="1179.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.93" arrivalSpeed="12.76" duration="1140.00" routeLength="14302.12" waitSteps="0" rerouteNo="0" devices="vehroute_1_6 tripinfo_1_6" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_59" depart="358.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="287.00" arrival="1181.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.66" arrivalSpeed="13.40" duration="823.00" routeLength="10254.36" waitSteps="0" rerouteNo="0" devices="vehroute_0_59 tripinfo_0_59" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_7" depart="45.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="37.00" arrival="1182.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="6.47" arrivalSpeed="13.15" duration="1137.00" routeLength="14304.66" waitSteps="0" rerouteNo="0" devices="vehroute_1_7 tripinfo_1_7" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_60" depart="364.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="292.00" arrival="1186.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="6.21" arrivalSpeed="13.05" duration="822.00" routeLength="10258.91" waitSteps="0" rerouteNo="0" devices="vehroute_0_60 tripinfo_0_60" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_8" depart="52.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="42.00" arrival="1188.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.19" arrivalSpeed="13.21" duration="1136.00" routeLength="14301.38" waitSteps="0" rerouteNo="0" devices="vehroute_1_8 tripinfo_1_8" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_9" depart="58.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="47.00" arrival="1193.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.49" arrivalSpeed="12.88" duration="1135.00" routeLength="14301.68" waitSteps="0" rerouteNo="0" devices="vehroute_1_9 tripinfo_1_9" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_61" depart="370.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="297.00" arrival="1194.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.23" arrivalSpeed="12.89" duration="824.00" routeLength="10255.93" waitSteps="0" rerouteNo="0" devices="vehroute_0_61 tripinfo_0_61" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_10" depart="64.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="52.00" arrival="1198.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="5.81" arrivalSpeed="13.06" duration="1134.00" routeLength="14304.00" waitSteps="0" rerouteNo="0" devices="vehroute_1_10 tripinfo_1_10" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_62" depart="376.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="302.00" arrival="1200.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.62" arrivalSpeed="12.77" duration="824.00" routeLength="10260.32" waitSteps="0" rerouteNo="0" devices="vehroute_0_62 tripinfo_0_62" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_11" depart="70.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="57.00" arrival="1205.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="8.95" arrivalSpeed="13.19" duration="1135.00" routeLength="14307.14" waitSteps="0" rerouteNo="0" devices="vehroute_1_11 tripinfo_1_11" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_63" depart="382.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="306.00" arrival="1205.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="5.71" arrivalSpeed="12.88" duration="823.00" routeLength="10258.41" waitSteps="0" rerouteNo="0" devices="vehroute_0_63 tripinfo_0_63" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_12" depart="76.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="62.00" arrival="1211.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="2.90" arrivalSpeed="13.19" duration="1135.00" routeLength="14301.09" waitSteps="0" rerouteNo="0" devices="vehroute_1_12 tripinfo_1_12" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_64" depart="388.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="311.00" arrival="1213.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="7.59" arrivalSpeed="12.72" duration="825.00" routeLength="10260.29" waitSteps="0" rerouteNo="0" devices="vehroute_0_64 tripinfo_0_64" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_13" depart="82.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="66.00" arrival="1217.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.09" arrivalSpeed="13.39" duration="1135.00" routeLength="14301.28" waitSteps="0" rerouteNo="0" devices="vehroute_1_13 tripinfo_1_13" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_65" depart="394.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="316.00" arrival="1218.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="3.94" arrivalSpeed="13.58" duration="824.00" routeLength="10256.64" waitSteps="0" rerouteNo="0" devices="vehroute_0_65 tripinfo_0_65" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_14" depart="88.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="71.00" arrival="1222.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="3.89" arrivalSpeed="12.99" duration="1134.00" routeLength="14302.08" waitSteps="0" rerouteNo="0" devices="vehroute_1_14 tripinfo_1_14" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_66" depart="400.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="321.00" arrival="1225.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="5.46" arrivalSpeed="13.73" duration="825.00" routeLength="10258.16" waitSteps="0" rerouteNo="0" devices="vehroute_0_66 tripinfo_0_66" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_15" depart="94.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="76.00" arrival="1230.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="1.47" arrivalSpeed="13.68" duration="1136.00" routeLength="14299.66" waitSteps="0" rerouteNo="0" devices="vehroute_1_15 tripinfo_1_15" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_67" depart="406.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="326.00" arrival="1231.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.68" arrivalSpeed="13.11" duration="825.00" routeLength="10254.38" waitSteps="0" rerouteNo="0" devices="vehroute_0_67 tripinfo_0_67" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_16" depart="100.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="81.00" arrival="1237.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="8.83" arrivalSpeed="13.55" duration="1137.00" routeLength="14307.02" waitSteps="0" rerouteNo="0" devices="vehroute_1_16 tripinfo_1_16" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_68" depart="412.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="330.00" arrival="1238.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.58" arrivalSpeed="12.65" duration="826.00" routeLength="10254.28" waitSteps="0" rerouteNo="0" devices="vehroute_0_68 tripinfo_0_68" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_17" depart="106.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="86.00" arrival="1244.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="0.24" arrivalSpeed="12.98" duration="1138.00" routeLength="14298.43" waitSteps="0" rerouteNo="0" devices="vehroute_1_17 tripinfo_1_17" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_69" depart="418.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="335.00" arrival="1246.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="0.68" arrivalSpeed="12.91" duration="828.00" routeLength="10253.38" waitSteps="0" rerouteNo="0" devices="vehroute_0_69 tripinfo_0_69" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="1_18" depart="112.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="90.00" arrival="1250.00" arrivalLane="fsalidacruceillia01-04_0" arrivalPos="9.29" arrivalSpeed="13.42" duration="1138.00" routeLength="14307.48" waitSteps="0" rerouteNo="0" devices="vehroute_1_18 tripinfo_1_18" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_70" depart="424.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="340.00" arrival="1251.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="6.60" arrivalSpeed="12.96" duration="827.00" routeLength="10259.30" waitSteps="0" rerouteNo="0" devices="vehroute_0_70 tripinfo_0_70" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
-    <tripinfo id="0_71" depart="430.00" departLane="fentradaSid02-03_0" departPos="7.60" departSpeed="0.00" departDelay="345.00" arrival="1257.00" arrivalLane="fsalidacruce188+05-04_0" arrivalPos="1.09" arrivalSpeed="13.39" duration="827.00" routeLength="10253.79" waitSteps="0" rerouteNo="0" devices="vehroute_0_71 tripinfo_0_71" vType="DEFAULT_VEHTYPE" vaporized="">
-    </tripinfo>
 </tripinfos>

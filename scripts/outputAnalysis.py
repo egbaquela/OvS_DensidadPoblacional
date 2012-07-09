@@ -12,6 +12,18 @@
 
 import sumoXMLProcessor
 import XMLProcessor
+from consts import *
+
+def loadTrips(tripsPath):
+#-------------------------------------------------------------------------------
+# TO-DO: Hacer que el parser XML pueda leer la salida como la genera el SUMO
+# (es decir, con el primer nodo que sea de comentarios).
+# Ideas: 1) hacer que detecte si el primer nodo es de comentario y avanzar al
+# siguiente, 2)hacer que le tenga que pasar como pará¡metro el nombre del nodo
+# del cual quiero obtener sus hijos
+#-------------------------------------------------------------------------------
+    myTrips = XMLProcessor.getNodeListFromXML(tripsPath, "tripinfo")
+    return myTrips
 
 def processTrips(trips):
 #-------------------------------------------------------------------------------
@@ -45,32 +57,28 @@ def generateTripsStats(trips):
 
     return sumOfTripTime / len(trip)
 
-def evaluateSolution():
+def evaluateSolution(tripsPath):
 #-------------------------------------------------------------------------------
 # Calcula el valor de la función FITNESS
 #-------------------------------------------------------------------------------
-    return 0
+    return generateTripsStats(processTrips(loadTrips(tripsPath)))
 
 def compareSolutions(solutionOne, solutionTwo, indiferenceFactor):
 #-------------------------------------------------------------------------------
 # Determinada cual de las dos soluciones es la mejor
 #-------------------------------------------------------------------------------
-    if abs(((solutionOne[SOLUTION_FITNESS_VALUE]-solutionTwo[SOLUTION_FITNESS_VALUE])/solutionTwo[SOLUTION_FITNESS_VALUE])<indiferenceFactor):
+    varSolutions = solutionOne-solutionTwo
+    varSolutions = varSolutions/solutionTwo
+    varSolutions = abs(varSolutions)
+    if (varSolutions<indiferenceFactor):
         return BOTH_SOLUTIONS_ARE_EQUALS
-    elif ((solutionOne[SOLUTION_FITNESS_VALUE]-solutionTwo[SOLUTION_FITNESS_VALUE])>0):
+    elif ((solutionOne-solutionTwo)>0):
         return SECOND_SOLUTION_IS_BETTER
     else:
         return FIRST_SOLUTION_IS_BETTER
 
 def main():
-#-------------------------------------------------------------------------------
-# TO-DO: Hacer que el parser XML pueda leer la salida como la genera el SUMO
-# (es decir, con el primer nodo que sea de comentarios).
-# Ideas: 1) hacer que detecte si el primer nodo es de comentario y avanzar al
-# siguiente, 2)hacer que le tenga que pasar como pará¡metro el nombre del nodo
-# del cual quiero obtener sus hijos
-#-------------------------------------------------------------------------------
-    myTrips = XMLProcessor.getNodeListFromXML("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml", "tripinfo")
+    myTrips = loadTrips("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml")
     #print(myTrips)
     myTripsInfo = processTrips(myTrips)
     print(myTripsInfo)

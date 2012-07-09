@@ -31,11 +31,7 @@ def normalize(oriDestNotNormalized, targetSize):
 #-------------------------------------------------------------------------------
     elementsList = list(oriDestNotNormalized)
 
-    print(NODE_DENSITY_MIN_INDEX)
-    print(NODE_DENSITY_MAX_INDEX)
     sumElements = listMatrix.sumCols(elementsList, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_MAX_INDEX)
-    print(elementsList[0])
-    print(sumElements)
     if (targetSize < int(sumElements[0])):
         for element in elementsList:
             element.append(int(element[NODE_DENSITY_MIN_INDEX]))
@@ -58,8 +54,6 @@ def shuffleOriDest(oriDestNormalized):
         if (oriDest[NODE_DENSITY_MIN_INDEX]==oriDest[NODE_DENSITY_MAX_INDEX]):
             oriDest[NODE_DENSITY_TRG_INDEX]= oriDest[NODE_DENSITY_MIN_INDEX]
         else:
-            print(oriDest[NODE_DENSITY_MIN_INDEX])
-            print(oriDest[NODE_DENSITY_MAX_INDEX])
             oriDest[NODE_DENSITY_TRG_INDEX]= random.randint(oriDest[NODE_DENSITY_MIN_INDEX], oriDest[NODE_DENSITY_MAX_INDEX])
 
     newElementList = normalize(elementsList, targetSize)
