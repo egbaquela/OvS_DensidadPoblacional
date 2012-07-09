@@ -101,13 +101,17 @@ def generateFlows(auxFrom, auxTo):
 #-------------------------------------------------------------------------------
     myFlows = []
     sumOfDemand = 0
+    sumOfOffer = 0
 
     for destination in auxTo:
         sumOfDemand= sumOfDemand + destination[NODE_DENSITY_TRG_INDEX]
 
     for origin in auxFrom:
+        sumOfOffer= sumOfOffer + origin[NODE_DENSITY_TRG_INDEX]
+
+    for origin in auxFrom:
         for destination in auxTo:
-            quantityToRoute = round(origin[NODE_DENSITY_TRG_INDEX]*(destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
+            quantityToRoute = round(sumOfDemand * (origin[NODE_DENSITY_TRG_INDEX]/sumOfOffer)*(destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
             if (quantityToRoute>0):
                 thisFlow = []
                 thisFlow.append(origin[NODE_ID_INDEX])
@@ -115,8 +119,8 @@ def generateFlows(auxFrom, auxTo):
                 thisFlow.append(0)
                 thisFlow.append(300)
                 thisFlow.append(quantityToRoute)
-                origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
-                destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - thisFlow[FLOW_QUANTITY_INDEX]
+                origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - quantityToRoute
+                destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - quantityToRoute
                 myFlows.append([thisFlow[FLOW_ID_FROM_INDEX],thisFlow[FLOW_ID_TO_INDEX], \
                 thisFlow[FLOW_START_TIME_INDEX],thisFlow[FLOW_END_TIME_INDEX], \
                 thisFlow[FLOW_QUANTITY_INDEX]])
