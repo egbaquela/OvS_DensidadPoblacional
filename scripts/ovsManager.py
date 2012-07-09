@@ -44,8 +44,8 @@ def main():
     factor = 0.01
     for n in range(12):
         #genero una solución en forma aleatoria
-        origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado)
-        destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado)
+        origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado,2000)
+        destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado,2000)
         flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
         sumoInterface.runDuarouter(duaroutercfgPath)
 

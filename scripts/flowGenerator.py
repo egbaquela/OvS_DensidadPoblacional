@@ -45,20 +45,37 @@ def normalize(oriDestNotNormalized, targetSize):
 # No es necesario retornar valor, ya que se modifican las sublistas originales
     return elementsList
 
-def shuffleOriDest(oriDestNormalized):
+def shuffleOriDest(oriDestNormalized, targetSize):
+#-------------------------------------------------------------------------------
+# Toma una lista de nodos orignenes/destinos normalizada y le asigna
+# aleatoriamente su capacidad objetivo.
+# Para ellos, recorre la lista asignando aleatoriamente el incremento
+# en valores entre la capacidad mínima (objetivo después de la primer
+# pasada) y máxima, repitiendo el proceso si sobra capacidad para asignar.
+#-------------------------------------------------------------------------------
     elementsList = list(oriDestNormalized)
     sumElements = listMatrix.sumCols(elementsList, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX)
-    targetSize = sumElements[2]
+    incCapacity = targetSize - sumElements[2]
+    proposalCapacity = 0
+    varCapacity = 0
+
+    elementsListShuffled = list(elementsList)
+    random.shuffle(elementsListShuffled,random.random)
 
     for oriDest in elementsList:
-        if (oriDest[NODE_DENSITY_MIN_INDEX]==oriDest[NODE_DENSITY_MAX_INDEX]):
-            oriDest[NODE_DENSITY_TRG_INDEX]= oriDest[NODE_DENSITY_MIN_INDEX]
-        else:
-            oriDest[NODE_DENSITY_TRG_INDEX]= random.randint(oriDest[NODE_DENSITY_MIN_INDEX], oriDest[NODE_DENSITY_MAX_INDEX])
+        oriDest[NODE_DENSITY_TRG_INDEX]= oriDest[NODE_DENSITY_MIN_INDEX]
 
-    newElementList = normalize(elementsList, targetSize)
+    while (incCapacity>0):
+        for oriDest in elementsList:
+            if (oriDest[NODE_DENSITY_TRG_INDEX]<oriDest[NODE_DENSITY_MAX_INDEX]):
+                proposalCapacity = random.randint(oriDest[NODE_DENSITY_TRG_INDEX], oriDest[NODE_DENSITY_MAX_INDEX])
+                varCapacity = proposalCapacity - oriDest[NODE_DENSITY_TRG_INDEX]
+                if (incCapacity < (varCapacity) - oriDest[NODE_DENSITY_TRG_INDEX]):
+                    varCapacity = incCapacity
+                oriDest[NODE_DENSITY_TRG_INDEX]= varCapacity + oriDest[NODE_DENSITY_TRG_INDEX]
+                incCapacity= incCapacity - varCapacity
 
-    return newElementList
+    return elementsList
 
 
 def generateInitialFlows(auxFrom, auxTo):
