@@ -29,9 +29,9 @@ def main():
     duaroutercfgPath = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido.ruoc.cfg"
     outputTrips = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml"
 
-    sumoInterface.setSumoPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\sumo-gui.exe")
-    sumoInterface.setSumoLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log")
-    sumoInterface.setDuarouterPath("D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe")
+    sumoInterface.setSumoPath("D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\sumo-gui.exe")
+    sumoInterface.setSumoLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\ulogs\\sumo.log")
+    sumoInterface.setDuarouterPath("D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\duarouter.exe")
     sumoInterface.setDuarouterLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
 
     #Creo/abro el archivo para grabar las soluciones encontradas

@@ -72,7 +72,7 @@ def getNetconvertLogPath():
 
 
 def runSumoSimulation(sumocfgPath):
-    commandSumo = ["D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\sumo.exe", "-c",sumocfgPath]
+    commandSumo = ["D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\sumo.exe", "-c",sumocfgPath]
     log = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log", "w+")
     #commandSumo = [getSumoPath(), "-c",sumocfgPath]
     #log = open(getSumoLogPath(), "w+")
@@ -81,7 +81,7 @@ def runSumoSimulation(sumocfgPath):
     log.close
 
 def runDuarouter(duaroutercfgPath):
-    commandDuarouter = ["D:\\Appls\\SUMO\\sumo-0.13.1\\bin\\duarouter.exe", "-c",duaroutercfgPath]
+    commandDuarouter = ["D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\duarouter.exe", "-c",duaroutercfgPath]
     log = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log", "w+")
     #commandDuarouter = [getDuarouterPath(), "-c",duaroutercfgPath]
     #log = open(getDuarouterLogPath(), "w+")
