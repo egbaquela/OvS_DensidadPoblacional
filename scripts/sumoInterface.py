@@ -72,7 +72,7 @@ def getNetconvertLogPath():
 
 
 def runSumoSimulation(sumocfgPath):
-    commandSumo = ["D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\sumo.exe", "-c",sumocfgPath]
+    commandSumo = ["D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\sumo-gui.exe", "-c",sumocfgPath]
     log = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\sumo.log", "w+")
     #commandSumo = [getSumoPath(), "-c",sumocfgPath]
     #log = open(getSumoLogPath(), "w+")

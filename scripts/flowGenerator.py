@@ -146,11 +146,11 @@ def generateFlows(auxFrom, auxTo):
 def saveFlowsInXML(auxFlows, auxFilename):
     filename = "%s.flow.xml" % auxFilename
     fd = open(filename, "w")
-    print("<?xml version=""1.0"" encoding=""iso-8859-1""?>", file = fd)
+    print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>", file = fd)
     print("<flows>", file = fd)
     i=0
     for flow in auxFlows:
-        print("  <flow id = \"%s\" from = \"%s\" to = \"%s\" begin = \"%s\"end = \"%s\" no = \"%s\" />" % (i, flow[0], flow [1] ,flow [2] , flow [3], flow [4]), file = fd)
+        print("  <flow id = \"%s\" from = \"%s\" to = \"%s\" begin = \"%s\" end = \"%s\" no = \"%s\" />" % (i, flow[0], flow [1] ,flow [2] , flow [3], flow [4]), file = fd)
         i=i+1
 
     print("</flows>", file = fd)
