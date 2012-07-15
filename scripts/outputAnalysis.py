@@ -85,6 +85,9 @@ def main():
     myTripsStats = generateTripsStats(myTripsInfo)
     print(myTripsStats)
 
+    outputTrips = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml"
+    print(evaluateSolution(outputTrips))
+
     pass
 
 if __name__ == '__main__':

@@ -1,4 +1,9 @@
 Loading configuration... done.
-Error: The loader for flow-files from file 'D:\Compartido\Proyectos\SUMO\OvS_DensidadPoblacional\models\routes\SNResumido.flow.xml' could not be initialised;
- (unknown reason).
+Warning: 'no' is deprecated, please use 'number' instead.
+Reading time step: 1.00  (1.00/2147483.00 = 0.00% done)       Error: No connection between 'fentradacruce188+05-01' and 'fsalidacruce188+05-01' found.
+Error: The vehicle '111_0' has no valid route.
+Error: No connection between 'fentradaSid02-03' and 'fsalidaSid02-03' found.
+Error: The vehicle '21_0' has no valid route.
+Error: No connection between 'fentradacruceillia01-04' and 'fsalidacruceillia01-04' found.
+Error: The vehicle '74_0' has no valid route.
 Quitting (on error).

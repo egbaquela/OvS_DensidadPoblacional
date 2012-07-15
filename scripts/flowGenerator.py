@@ -116,6 +116,7 @@ def generateFlows(auxFrom, auxTo):
 # Este método genera flujos desde cada origen a todos los destino en la misma
 # proporción que se distribuye la demanda.
 #-------------------------------------------------------------------------------
+    print("Flow en generación")
     myFlows = []
     sumOfDemand = 0
     sumOfOffer = 0
@@ -141,6 +142,7 @@ def generateFlows(auxFrom, auxTo):
                 myFlows.append([thisFlow[FLOW_ID_FROM_INDEX],thisFlow[FLOW_ID_TO_INDEX], \
                 thisFlow[FLOW_START_TIME_INDEX],thisFlow[FLOW_END_TIME_INDEX], \
                 thisFlow[FLOW_QUANTITY_INDEX]])
+    print("Flow Generado")
     return myFlows
 
 def saveFlowsInXML(auxFlows, auxFilename):

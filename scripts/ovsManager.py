@@ -36,27 +36,36 @@ def main():
 
     #Creo/abro el archivo para grabar las soluciones encontradas
     fd = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\output.log", "a")
+    myLog2 = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\MyLog2.log", "w")
 
     #Genero la población inicial de soluciones
     bestSolutions=[]
     thisSolution=[]
     optimalSolution = False
     factor = 0.01
-    for n in range(12):
+    for n in range(2):
         #genero una solución en forma aleatoria
         origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado,2000)
         destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado,2000)
         flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
+        print("DUAROUTER iniciada", file=myLog2)
         sumoInterface.runDuarouter(duaroutercfgPath)
+        print("DUAROUTER finalizada", file=myLog2)
 
         #Evalúo la solución y, si es buena, la agrego a la lista de buenas soluciones
+        print("Simulación iniciada", file=myLog2)
         sumoInterface.runSumoSimulation(sumocfgPath)
+        print("Simulación terminada", file=myLog2)
         thisSolution = [origenNormalizado, destinoNormalizado, outputAnalysis.evaluateSolution(outputTrips)]
+        print("Analizando solución", file=myLog2)
         print(str(thisSolution[SOLUTION_FITNESS_VALUE_INDEX]), file = fd)
         if len(bestSolutions)<10:
             bestSolutions.append([thisSolution[SOLUTION_ORIGIN_INDEX], thisSolution[SOLUTION_DESTINATION_INDEX], thisSolution[SOLUTION_FITNESS_VALUE_INDEX]])
+            print("If<10", file=myLog2)
         else:
+            print("IF>=10", file=myLog2)
             for i in range(10):
+                print("Prueba", file=myLog2)
                 solutionToCompare = bestSolutions[i]
                 if (outputAnalysis.compareSolutions(thisSolution[SOLUTION_FITNESS_VALUE_INDEX], solutionToCompare[SOLUTION_FITNESS_VALUE_INDEX], factor)==SECOND_SOLUTION_IS_BETTER):
                     if not(i==0):
@@ -70,6 +79,7 @@ def main():
 
     print("Solución Encontrada")
     fd.close
+    myLog2.close
     pass
 
 if __name__ == '__main__':
