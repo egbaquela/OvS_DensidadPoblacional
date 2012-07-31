@@ -59,21 +59,27 @@ def shuffleOriDest(oriDestNormalized, targetSize):
     proposalCapacity = 0
     varCapacity = 0
 
+
     elementsListShuffled = list(elementsList)
     random.shuffle(elementsListShuffled,random.random)
 
-    for oriDest in elementsList:
+
+    for oriDest in elementsListShuffled:
         oriDest[NODE_DENSITY_TRG_INDEX]= oriDest[NODE_DENSITY_MIN_INDEX]
 
-    while (incCapacity>0):
-        for oriDest in elementsList:
+    bSaturedCapacity = False
+    while ((incCapacity>0) and (bSaturedCapacity==False)):
+        bSaturedCapacity = True
+        for oriDest in elementsListShuffled:
             if (oriDest[NODE_DENSITY_TRG_INDEX]<oriDest[NODE_DENSITY_MAX_INDEX]):
+                bSaturedCapacity = False
                 proposalCapacity = random.randint(oriDest[NODE_DENSITY_TRG_INDEX], oriDest[NODE_DENSITY_MAX_INDEX])
                 varCapacity = proposalCapacity - oriDest[NODE_DENSITY_TRG_INDEX]
-                if (incCapacity < (varCapacity) - oriDest[NODE_DENSITY_TRG_INDEX]):
+                if (incCapacity < varCapacity):
                     varCapacity = incCapacity
                 oriDest[NODE_DENSITY_TRG_INDEX]= varCapacity + oriDest[NODE_DENSITY_TRG_INDEX]
                 incCapacity= incCapacity - varCapacity
+                print(incCapacity)
 
     return elementsList
 
