@@ -36,17 +36,18 @@ def main():
 
     #Creo/abro el archivo para grabar las soluciones encontradas
     fd = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\output.log", "a")
-    myLog2 = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\MyLog2.log", "w")
+    myLog2 = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\MyLog2.log", "a")
 
     #Genero la población inicial de soluciones
     bestSolutions=[]
     thisSolution=[]
     optimalSolution = False
     factor = 0.01
-    for n in range(2):
+    for n in range(10):
         #genero una solución en forma aleatoria
         origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado,2000)
         destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado,2000)
+        print("Shuffle Destino Finalizado")
         flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
         print("DUAROUTER iniciada", file=myLog2)
         sumoInterface.runDuarouter(duaroutercfgPath)
