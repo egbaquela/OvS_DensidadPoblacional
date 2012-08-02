@@ -18,7 +18,10 @@ def loadNodesFromXML(filePath):
     return myNodes
 
 def getNodeList(nodes, nodeLabel):
-    myList = nodes[0].getElementsByTagName(nodeLabel)
+    for node in nodes:
+        if node.nodeType == node.ELEMENT_NODE:
+            myList = node.getElementsByTagName(nodeLabel)
+            break
     return myList
 
 def getNodeListFromXML(filePath, nodeLabel):

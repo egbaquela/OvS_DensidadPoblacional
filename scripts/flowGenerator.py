@@ -15,6 +15,7 @@ import XMLProcessor
 import listMatrix
 import random
 from consts import *
+from math import floor
 
 def cargarOrigenDestino(dataOrigin):
     myList = XMLProcessor.getNodeListFromXML(dataOrigin,"edge")
@@ -27,7 +28,8 @@ def cargarOrigenDestino(dataOrigin):
 def normalize(oriDestNotNormalized, targetSize):
 #-------------------------------------------------------------------------------
 # Devuelve una matriz cuyo primer campo es el ID, el segundo es la densidad
-# mínima, el tercero la densidad máxima y el cuarto la densidad ajustada.
+# mínima, el tercero la densidad máxima, el cuarto la densidad ajustada
+# y el quinto el campo auxiliar
 #-------------------------------------------------------------------------------
     elementsList = list(oriDestNotNormalized)
 
@@ -35,12 +37,15 @@ def normalize(oriDestNotNormalized, targetSize):
     if (targetSize < int(sumElements[0])):
         for element in elementsList:
             element.append(int(element[NODE_DENSITY_MIN_INDEX]))
+            element.append(int(element[NODE_DENSITY_MIN_INDEX]))
     elif (targetSize > int(sumElements[1])):
         for element in elementsList:
+            element.append(int(element[NODE_DENSITY_MAX_INDEX]))
             element.append(int(element[NODE_DENSITY_MAX_INDEX]))
     else:
         incTargetSize = targetSize / int(sumElements[0])
         for element in elementsList:
+            element.append(round(int(element[NODE_DENSITY_MIN_INDEX])*incTargetSize))
             element.append(round(int(element[NODE_DENSITY_MIN_INDEX])*incTargetSize))
 # No es necesario retornar valor, ya que se modifican las sublistas originales
     return elementsList
@@ -55,22 +60,22 @@ def shuffleOriDest(oriDestNormalized, targetSize):
 #-------------------------------------------------------------------------------
     elementsList = list(oriDestNormalized)
     sumElements = listMatrix.sumCols(elementsList, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX)
-    incCapacity = targetSize - sumElements[2]
+    incCapacity = targetSize - sumElements[0]
     proposalCapacity = 0
     varCapacity = 0
 
 
-    elementsListShuffled = list(elementsList)
-    random.shuffle(elementsListShuffled,random.random)
+    random.seed()
+    random.shuffle(elementsList,random.random)
 
 
-    for oriDest in elementsListShuffled:
+    for oriDest in elementsList:
         oriDest[NODE_DENSITY_TRG_INDEX]= oriDest[NODE_DENSITY_MIN_INDEX]
 
     bSaturedCapacity = False
     while ((incCapacity>0) and (bSaturedCapacity==False)):
         bSaturedCapacity = True
-        for oriDest in elementsListShuffled:
+        for oriDest in elementsList:
             if (oriDest[NODE_DENSITY_TRG_INDEX]<oriDest[NODE_DENSITY_MAX_INDEX]):
                 bSaturedCapacity = False
                 proposalCapacity = random.randint(oriDest[NODE_DENSITY_TRG_INDEX], oriDest[NODE_DENSITY_MAX_INDEX])
@@ -79,9 +84,7 @@ def shuffleOriDest(oriDestNormalized, targetSize):
                     varCapacity = incCapacity
                 oriDest[NODE_DENSITY_TRG_INDEX]= varCapacity + oriDest[NODE_DENSITY_TRG_INDEX]
                 incCapacity= incCapacity - varCapacity
-                print(incCapacity)
 
-    return elementsList
 
 
 def generateInitialFlows(auxFrom, auxTo):
@@ -129,26 +132,28 @@ def generateFlows(auxFrom, auxTo):
 
     for destination in auxTo:
         sumOfDemand= sumOfDemand + destination[NODE_DENSITY_TRG_INDEX]
+        destination[NODE_DENSITY_AUX_INDEX] = destination[NODE_DENSITY_TRG_INDEX]
 
     for origin in auxFrom:
         sumOfOffer= sumOfOffer + origin[NODE_DENSITY_TRG_INDEX]
+        origin[NODE_DENSITY_AUX_INDEX] = origin[NODE_DENSITY_TRG_INDEX]
 
     for origin in auxFrom:
         for destination in auxTo:
-            quantityToRoute = round(sumOfDemand * (origin[NODE_DENSITY_TRG_INDEX]/sumOfOffer)*(destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
+            #quantityToRoute = round(sumOfDemand * (origin[NODE_DENSITY_TRG_INDEX]/sumOfOffer)*(destination[NODE_DENSITY_TRG_INDEX]/sumOfDemand))
+            quantityToRoute = floor(origin[NODE_DENSITY_AUX_INDEX]*(destination[NODE_DENSITY_AUX_INDEX]/sumOfDemand))
             if (quantityToRoute>0):
                 thisFlow = []
                 thisFlow.append(origin[NODE_ID_INDEX])
                 thisFlow.append(destination[NODE_ID_INDEX])
                 thisFlow.append(0)
-                thisFlow.append(300)
+                thisFlow.append(3000)
                 thisFlow.append(quantityToRoute)
                 origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - quantityToRoute
                 destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - quantityToRoute
                 myFlows.append([thisFlow[FLOW_ID_FROM_INDEX],thisFlow[FLOW_ID_TO_INDEX], \
                 thisFlow[FLOW_START_TIME_INDEX],thisFlow[FLOW_END_TIME_INDEX], \
                 thisFlow[FLOW_QUANTITY_INDEX]])
-    print("Flow Generado")
     return myFlows
 
 def saveFlowsInXML(auxFlows, auxFilename):
@@ -168,15 +173,18 @@ def generateFlowsInXML(auxFrom, auxTo, auxFilename):
     saveFlowsInXML(generateFlows(auxFrom, auxTo),auxFilename)
 
 def main():
-    destinos = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.ddp.xml")
-    origenes = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml")
-    poblacionObjetivo = 1248
-    destinosNormalizados = normalize(destinos, poblacionObjetivo)
-    origenesNormalizados = normalize(origenes, poblacionObjetivo)
-    myFlows = generateInitialFlows(origenesNormalizados, destinosNormalizados)
-    print(origenes)
-    saveFlowsInXML(myFlows, "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido")
+#    destinos = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.ddp.xml")
+#    origenes = cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml")
+#    poblacionObjetivo = 1248
+#    destinosNormalizados = normalize(destinos, poblacionObjetivo)
+#    origenesNormalizados = normalize(origenes, poblacionObjetivo)
+#    myFlows = generateInitialFlows(origenesNormalizados, destinosNormalizados)
+#    print(origenes)
+#    saveFlowsInXML(myFlows, "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido")
 
+    a = [['fsalidacruce-01-01', 0, 100,0], ['fentradacruce-01-01', 50, 100, 0], ['fsalidacruce-01-02', 25, 150, 0]]
+    shuffleOriDest(a,100)
+    print(a)
     pass
 
 if __name__ == '__main__':

@@ -14,20 +14,21 @@ import sumoInterface
 import flowGenerator
 import outputAnalysis
 from consts import *
+import listMatrix
 
 def main():
 
     #Cargo las listas de nodos orígenes y destinos y los normalizo
     origen = flowGenerator.cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.dop.xml")
     destino = flowGenerator.cargarOrigenDestino("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\data\\SNResumido.ddp.xml")
-    origenNormalizado= flowGenerator.normalize(origen, 2000)
-    destinoNormalizado = flowGenerator.normalize(destino, 2000)
+    origenNormalizado= flowGenerator.normalize(origen, 10000)
+    destinoNormalizado = flowGenerator.normalize(destino, 10000)
 
     #Definos las variables de Paths
     routeFilePath= "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido"
     sumocfgPath = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\SNResumido.sumo.cfg"
     duaroutercfgPath = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\models\\routes\\SNResumido.ruoc.cfg"
-    outputTrips = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido2.trip.xml"
+    outputTrips = "D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\SNResumido.trip.xml"
 
     sumoInterface.setSumoPath("D:\\Appls\\SUMO\\sumo-0.15.0\\bin\\sumo-gui.exe")
     sumoInterface.setSumoLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\ulogs\\sumo.log")
@@ -35,7 +36,7 @@ def main():
     sumoInterface.setDuarouterLogPath("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\duatouter.log")
 
     #Creo/abro el archivo para grabar las soluciones encontradas
-    fd = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\output.log", "a")
+    fd = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\output\\output.log", "w")
     myLog2 = open("D:\\Compartido\\Proyectos\\SUMO\\OvS_DensidadPoblacional\\logs\\MyLog2.log", "a")
 
     #Genero la población inicial de soluciones
@@ -43,15 +44,19 @@ def main():
     thisSolution=[]
     optimalSolution = False
     factor = 0.01
-    for n in range(10):
+    for n in range(1):
         #genero una solución en forma aleatoria
-        origenNormalizado = flowGenerator.shuffleOriDest(origenNormalizado,2000)
-        destinoNormalizado = flowGenerator.shuffleOriDest(destinoNormalizado,2000)
+        flowGenerator.shuffleOriDest(origenNormalizado,10000)
+        print(listMatrix.sumCols(origenNormalizado, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX))
+        flowGenerator.shuffleOriDest(destinoNormalizado,10000)
         print("Shuffle Destino Finalizado")
+        print(listMatrix.sumCols(origenNormalizado, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX))
         flowGenerator.generateFlowsInXML(origenNormalizado, destinoNormalizado, routeFilePath)
+        print(listMatrix.sumCols(origenNormalizado, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX))
         print("DUAROUTER iniciada", file=myLog2)
         sumoInterface.runDuarouter(duaroutercfgPath)
         print("DUAROUTER finalizada", file=myLog2)
+        print(listMatrix.sumCols(origenNormalizado, NODE_DENSITY_MIN_INDEX,NODE_DENSITY_TRG_INDEX))
 
         #Evalúo la solución y, si es buena, la agrego a la lista de buenas soluciones
         print("Simulación iniciada", file=myLog2)
@@ -74,14 +79,18 @@ def main():
                         bestSolutions.insert(i,[thisSolution[SOLUTION_ORIGIN_INDEX], thisSolution[SOLUTION_DESTINATION_INDEX], thisSolution[SOLUTION_FITNESS_VALUE_INDEX]])
 
 
-    #Aplico convolución sobre las soluciones de la lista de buenas soluciones,
-    #y me quedo con la mejor.
-
-
     print("Solución Encontrada")
     fd.close
     myLog2.close
-    pass
+
+#    a = [['fsalidacruce-01-01', 0, 100,0], ['fentradacruce-01-01', 50, 100, 0], ['fsalidacruce-01-02', 25, 150, 0]]
+#    flowGenerator.shuffleOriDest(a,100)
+#    print(a)
+#    flowGenerator.shuffleOriDest(a,100)
+#    print(a)
+#    flowGenerator.shuffleOriDest(a,100)
+#    print(a)
+#    pass
 
 if __name__ == '__main__':
     main()

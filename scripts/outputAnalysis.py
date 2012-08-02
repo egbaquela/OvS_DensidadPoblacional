@@ -53,9 +53,9 @@ def generateTripsStats(trips):
     sumOfTripTime = 0
 
     for trip in trips:
-        sumOfTripTime = float(trip[2])-float(trip[1])
+        sumOfTripTime = sumOfTripTime + (float(trip[2])-float(trip[1]))
 
-    return sumOfTripTime / len(trip)
+    return sumOfTripTime / len(trips)
 
 def evaluateSolution(tripsPath):
 #-------------------------------------------------------------------------------
