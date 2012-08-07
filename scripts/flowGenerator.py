@@ -125,7 +125,6 @@ def generateFlows(auxFrom, auxTo):
 # Este método genera flujos desde cada origen a todos los destino en la misma
 # proporción que se distribuye la demanda.
 #-------------------------------------------------------------------------------
-    print("Flow en generación")
     myFlows = []
     sumOfDemand = 0
     sumOfOffer = 0
@@ -147,7 +146,7 @@ def generateFlows(auxFrom, auxTo):
                 thisFlow.append(origin[NODE_ID_INDEX])
                 thisFlow.append(destination[NODE_ID_INDEX])
                 thisFlow.append(0)
-                thisFlow.append(3000)
+                thisFlow.append(1)
                 thisFlow.append(quantityToRoute)
                 origin[NODE_DENSITY_TRG_INDEX] = origin[NODE_DENSITY_TRG_INDEX] - quantityToRoute
                 destination[NODE_DENSITY_TRG_INDEX] = destination[NODE_DENSITY_TRG_INDEX] - quantityToRoute

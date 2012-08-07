@@ -38,8 +38,10 @@ def processTrips(trips):
         myTrip.append(trip.attributes["id"].value)
         myTrip.append(trip.attributes["depart"].value)
         myTrip.append(trip.attributes["arrival"].value)
-        myTrip.append(sumoXMLProcessor.extractEdgeFromLane((trip.attributes["departLane"].value)))
-        myTrip.append(sumoXMLProcessor.extractEdgeFromLane(trip.attributes["arrivalLane"].value))
+        #myTrip.append(sumoXMLProcessor.extractEdgeFromLane((trip.attributes["departLane"].value)))
+        #myTrip.append(sumoXMLProcessor.extractEdgeFromLane(trip.attributes["arrivalLane"].value))
+        myTrip.append(trip.attributes["departLane"].value)
+        myTrip.append(trip.attributes["arrivalLane"].value)
         myTrip.append(sumoXMLProcessor.extractTripTypeFromIDTripinfo(trip.attributes["id"].value))
         myTrips.append(myTrip)
 
